@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--==================== TAILWIND ====================-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--==================== FONT AWESOME ====================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <title>Karen Andriantasy</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="p-3 fixed top-0 left-0 right-0 shadow-md rounded-b-2xl z-50">
+            <div class="container mx-auto flex items-center justify-between">
+                <div class="text-4xl text-red-500">
+                    <i class="fa-solid fa-code font-bold"></i>
+                </div>
+
+                <!-- Desktop menu -->
+                <ul class="hidden md:flex space-x-6 items-center">
+                    <li><a href="#home"
+                            class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Accueil</a>
+                    </li>
+                    <li><a href="#about"
+                            class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">À
+                            Propos</a></li>
+                    <li><a href="#formation"
+                            class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Formations</a>
+                    </li>
+                    <li><a href="#skills"
+                            class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Compétences</a>
+                    </li>
+                    <li><a href="#projets"
+                            class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Projets</a>
+                    </li>
+
+                    <li class="relative group">
+                        <i class="fas fa-envelope text-2xl cursor-pointer"></i>
+
+                        <!-- Bloc d'informations cachées -->
+                        <div
+                            class="absolute right-0 top-full mt-2 bg-white text-gray-700 p-4 rounded shadow-md opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0 translate-x-4 transition-all duration-300 ease-in-out">
+                            <p class=><strong class="text">Email :</strong> kar3nmitia@gmail.com</p>
+                            <p class=><strong class="text">Téléphone : <br></strong> <u>+230 57656260</u></p>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <!-- Responsive menu -->
+                <!-- Hamburger Icon -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="menu" class="hidden md:hidden mt-4 space-y-2 px-4 text-left flex flex-col items-center text-left">
+                <a href="#home" class="nav-link block">Accueil</a>
+                <a href="#about" class="nav-link block">À propos</a>
+                <a href="#formation" class="nav-link block">Formations</a>
+                <a href="#skills" class="nav-link block">Compétences</a>
+                <a href="#projets" class="nav-link block">Projets</a>
+                <a href=""><i class="fas fa-envelope text-2xl cursor-pointer"></i>
+
+                    <!-- Bloc d'informations cachées -->
+                    <div
+                        class="absolute right-0 top-full mt-2 bg-white text-gray-700 p-4 rounded shadow-md opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0 translate-x-4 transition-all duration-300 ease-in-out">
+                        <p class=><strong class="text">Email :</strong> kar3nmitia@gmail.com</p>
+                        <p class=><strong class="text">Téléphone : <br></strong> <u>+230 57656260</u></p>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Responsive menu end  -->
+
+            </div>
+        </nav>
+
+    </header>
+    <!--==================== MAIN ====================-->
+    <main class="main mt-20 md:mt-[10rem]">
+        <!--==================== HOME ====================-->
+        <section class="flex flex-col-reverse md:flex-row flex-wrap justify-center gap-10 p-6 md:mt-[15rem]" id="home"
+            data-aos="zoom-in" data-aos-duration=1500>
+
+            <!-- icônes de contact -->
+            <div class="content flex flex-row md:flex-col gap-8 items-center justify-center">
+                <a href="https://github.com/Karenathi">
+                    <i class="fab fa-github text-4xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/karen-andriantasy-15a275274/">
+                    <i class="fab fa-linkedin text-4xl"></i>
+                </a>
+            </div>
+
+            <!-- je suis Karen -->
+            <div class="content flex flex-col justify-center gap-2 text-center md:text-left">
+                <h1 class="text-4xl font-bold">
+                    Karen Andriantasy
+                </h1>
+                <p class="text-2xl font-bold">Étudiante en Informatique & Dévellopeur Full Stack</p>
+                <p class="w-full md:w-[25rem] mt-4">
+                    Actuellement en première année de BTS Services Informatiques aux Organisations, je me passionne pour
+                    le développement web. Engagée et motivée, je m'efforce de renforcer mes compétences aussi bien en
+                    développement frontend qu'en backend, avec l'objectif de les mettre en pratique dans des projets
+                    concrets et innovants.
+                </p>
+                <a href=""><button class="mt-2 button">Voir mon CV</button></a>
+            </div>
+
+            <!-- profil -->
+            <div class="content image-container mx-auto md:mx-0">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#A31D1D"
+                        d="M50,-60C65,-50,75,-30,78,-10C80,10,75,30,65,45C55,60,40,70,20,75C0,80,-20,80,-35,70C-50,60,-60,40,-65,20C-70,0,-70,-20,-60,-35C-50,-50,-30,-60,-10,-70C10,-80,30,-75,50,-60Z"
+                        transform="translate(100 100)" />
+                </svg>
+                <img src="assets/img/karen.png" alt="Karen" class="rounded-full object-cover shadow-lg" />
+            </div>
+        </section>
+
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section mt-10 md:mt-[15rem] justify-center text-center" id="about">
+            <h1 class="text-3xl font-bold">À Propos de moi</h1>
+
+            <div class="flex flex-col md:flex-row flex-wrap justify-center gap-10 p-6 items-center">
+                <div class="p-4 w-[35rem] text-left flex flex-col gap-4" data-aos="fade-left" data-aos-duration=1500>
+
+                    <div class="flex flex-row gap-8">
+                        <i class="fas fa-laptop-code text-4xl"></i>
+                        <i class="fas fa-mobile-alt text-4xl"></i>
+                    </div>
+                    <p>Actuellement en formation, je conçois et développe des applications web et mobiles avec passion.
+                        De
+                        la
+                        création d’interfaces modernes à la gestion des bases de données, j’aime relever les défis
+                        techniques tout
+                        en plaçant l’expérience utilisateur au cœur de mes projets. Mon objectif ? Créer des solutions à
+                        la
+                        fois
+                        élégantes, efficaces et évolutives.</p>
+
+
+
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1500">
+                    <img src="assets/img/about.png" alt="">
+                </div>
+            </div>
+
+        </section>
+
+
+        <!--==================== FORMATIONS  ====================-->
+        <section class="formation section mt-10 md:mt-[10rem] justify-center text-center" id="formation">
+            <h1 class="text-3xl font-bold">Formations</h1>
+
+            <div
+                class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-[5rem] md:gap-[5rem] mt-20">
+                <!-- Carte 1 -->
+                <div class=" card-hover-neon bg-white border border-gray-300 rounded-2xl shadow-md p-8 w-full max-w-sm text-center text-gray-800 cursor-pointer flex flex-col justify-between min-h-[300px]"
+                    data-aos="fade-right" data-aos-duration="1000">
+                    <img src="assets/img/mcci-logo.png" alt="Logo" class="mx-auto mb-4 w-24 h-24 object-contain">
+                    <h1 class="text-2xl font-bold mb-2">MCCI Business School</h1>
+                    <p>BTS Services Informatiques aux Organisations - 1ère année</p>
+                </div>
+
+                <!-- Carte 2 -->
+                <div class="  card-hover-neon bg-white border border-gray-300 rounded-2xl shadow-md p-8 w-full max-w-sm text-center text-gray-800 cursor-pointer flex flex-col justify-between min-h-[300px]"
+                    data-aos="fade-right" data-aos-duration="1000">
+                    <img src="assets/img/hei-logo.png" alt="Logo" class="mx-auto mb-4 w-24 h-24 object-contain">
+                    <h1 class="text-2xl font-bold mb-2">HEI Madagascar</h1>
+                    <p>L1 et L2 en Informatique</p>
+                </div>
+
+                <!-- Carte 3 -->
+                <div class=" card-hover-neon bg-white border border-gray-300 rounded-2xl shadow-md p-8 w-full max-w-sm text-center text-gray-800 cursor-pointer flex flex-col justify-between min-h-[300px]"
+                    data-aos="fade-right" data-aos-duration="1000">
+                    <img src="assets/img/lycee.png" alt="Logo" class="mx-auto mb-4 w-24 h-24 object-contain">
+                    <h1 class="text-2xl font-bold mb-2">Lycée Saint Antoine Ankadifotsy</h1>
+                    <p>Baccalauréat Scientifique</p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!--==================== COMPETENCES  ====================-->
+        <section class="about section mt-10 md:mt-[15rem] justify-center text-center" id="skills">
+            <h1 class="text-3xl font-bold">Compétences</h1>
+
+            <section class="py-20 px-4 max-w-6xl mx-auto relative">
+                <h2 class="text-3xl font-bold text-center mb-16">Langages de programmation</h2>
+
+                <!-- Conteneur barre + blocs -->
+                <div class="relative">
+
+                    <!-- Barre verticale (centrée sur grand écran, à gauche sur mobile) -->
+                    <div
+                        class="absolute top-0 bottom-0 left-4 lg:left-1/2 transform lg:-translate-x-1/2 w-1 bg-red-600 z-0">
+                    </div>
+
+                    <!-- Blocs alignés en zigzag -->
+                    <div class="relative z-10 flex flex-col gap-16 lg:grid lg:grid-cols-2 lg:gap-y-20">
+
+                        <!-- Bloc Frontend -->
+                        <div
+                            class="relative lg:col-start-1 lg:pr-10 lg:justify-self-end w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded" data-aos="fade-left" data-aos-duration="1000">
+                            <h3 class="text-xl font-bold text-red-600 mb-4">Frontend</h3>
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <p class="font-semibold">HTML</p>
+                                    <i class="fab fa-html5 text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">CSS</p>
+                                    <i class="fab fa-css3-alt text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">JavaScript</p>
+                                    <i class="fab fa-js text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">React JS</p>
+                                    <i class="fab fa-react text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Tailwind</p>
+                                    <i class="fas fa-wind text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bloc Backend -->
+                        <div
+                            class="relative lg:col-start-2 lg:pl-10 lg:justify-self-start w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded mt-10 lg:mt-0" data-aos="fade-right" data-aos-duration="1000">
+                            <h3 class="text-xl font-bold text-red-600 mb-4">Backend</h3>
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <p class="font-semibold">PHP</p>
+                                    <i class="fab fa-php text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Java</p>
+                                    <i class="fab fa-java text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Node.js</p>
+                                    <i class="fab fa-node-js text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Next.js</p>
+                                    <i class="fab fa-react text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Tailwind</p>
+                                    <i class="fas fa-wind text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Python</p>
+                                    <i class="fab fa-python text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bloc Ops -->
+                        <div
+                            class="relative lg:col-start-1 lg:pr-10 lg:justify-self-end w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded"data-aos="fade-left" data-aos-duration="1000">
+                            <h3 class="text-xl font-bold text-red-600 mb-4">Ops</h3>
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <p class="font-semibold">AWS Lambda</p>
+                                    <i class="fab fa-aws text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Débutant</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">GitLab CI/CD</p>
+                                    <i class="fab fa-gitlab text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Débutant</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Docker</p>
+                                    <i class="fab fa-docker text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Débutant</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bloc Outils de design -->
+                        <div
+                            class="relative lg:col-start-2 lg:pl-10 lg:justify-self-start w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded mt-10 lg:mt-0" data-aos="fade-right" data-aos-duration="1000">
+                            <h3 class="text-xl font-bold text-red-600 mb-4">Outils de design</h3>
+                            <div class="grid grid-cols-4 gap-4 text-center">
+                                <div>
+                                    <p class="font-semibold">Figma</p>
+                                    <i class="fab fa-figma text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Lightroom</p>
+                                    <i class="fas fa-sliders-h text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Photoshop</p>
+                                    <i class="fas fa-image text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Canva</p>
+                                    <i class="fas fa-pen-nib text-red-600 text-3xl"></i>
+                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
+
+
+        <!--==================== PROJETS  ====================-->
+        <section class="about section mt-10 md:mt-[5rem] justify-center text-center" id="projets">
+            <h1 class="text-3xl font-bold">Projets</h1>
+
+            <div
+                class="flex flex-col md:flex-row flex-wrap justify-center gap-20 p-6 items-center gap-10 cursor-pointer">
+
+                <div class="content flex flex-col gap-2" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="font-bold">Supercar - Client</h1>
+                    <p class="text-gray-400">Application Web</p>
+                    <img src="assets/img/supercar-client.png" alt="supercar-client" class="w-[500px]">
+
+                    <a href="http://localhost:8888/supercar/">
+                        <p class="text-md mt-4 button">Voir l'application</p>
+                    </a>
+                </div>
+
+                <div class="content flex flex-col gap-2" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="font-bold">Supercar - Admin</h1>
+                    <p class="text-gray-400">Application Web</p>
+                    <img src="assets/img/supercar-admin.png" alt="supercar-client" class="w-[500px]">
+
+                    <a href="http://localhost:8888/supercar-admin/">
+                        <p class="text-md mt-4 button">Voir l'application</p>
+                    </a>
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+
+
+        <!--==================== MAIN JS ====================-->
+        <script src="js/class.js"></script>
+        <!-- AOS JS -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+</body>
+
+</html>
