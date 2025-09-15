@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="assets/img/about.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
 
     <title>Karen Andriantasy</title>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="p-3 fixed top-0 left-0 right-0 shadow-md rounded-b-2xl z-50">
@@ -351,10 +351,10 @@
 
         <!--==================== PROJETS  ====================-->
         <section class="about section mt-10 md:mt-[5rem] justify-center text-center" id="projets">
-            <h1 class="text-3xl font-bold mb-6">Projets</h1>
+            <h1 class="text-3xl font-bold mb-6" data-aos="fade-down" data-aos-duration="800">Projets</h1>
 
             <!-- Onglets -->
-            <div class="flex justify-center gap-6 mb-8">
+            <div class="flex justify-center gap-6 mb-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                 <button class="tab-btn px-6 py-2 rounded-lg bg-gray-200 text-gray-700 font-semibold" data-tab="tous">
                     Tous les projets
                 </button>
@@ -369,8 +369,8 @@
             <!-- Contenu Formation -->
             <div id="formation" class="tab-content flex flex-wrap justify-center gap-10 p-6">
                 <!-- Supercar Client -->
-                <div
-                    class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center">
+                <div class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center"
+                    data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <h1 class="font-bold">Supercar - Client</h1>
                     <p class="text-gray-400">Application Web</p>
                     <img src="assets/img/supercar-client.png" alt="supercar-client"
@@ -381,8 +381,8 @@
                 </div>
 
                 <!-- Supercar Admin -->
-                <div
-                    class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center">
+                <div class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center"
+                    data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <h1 class="font-bold">Supercar - Admin</h1>
                     <p class="text-gray-400">Application Web</p>
                     <img src="assets/img/supercar-admin.png" alt="supercar-admin"
@@ -393,12 +393,11 @@
                 </div>
             </div>
 
-
             <!-- Contenu Stage -->
             <div id="stage" class="tab-content hidden flex flex-wrap justify-center gap-10 p-6">
-                <!-- Colonne 1 : Projet principal -->
-                <div
-                    class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center">
+                <!-- Projet principal -->
+                <div class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center"
+                    data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
                     <h1 class="font-bold text-lg">Acensi - Moka, Maurice</h1>
                     <p class="text-gray-400">Développement Full Stack d'un logiciel CRM</p>
                     <img src="assets/img/stage-crm.png" alt="crm-stage"
@@ -408,32 +407,32 @@
                     </a>
                 </div>
 
-                <!-- Colonne 2 : Rapport de Stage -->
-                <div
-                    class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center">
+                <!-- Rapport de Stage -->
+                <div class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center"
+                    data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <h1 class="font-bold text-lg">Rapport de Stage</h1>
                     <p class="text-gray-400">Résumé du rapport</p>
                     <img src="assets/img/rapport.png" alt="rapport-stage"
                         class="w-full h-[180px] object-cover rounded-lg">
-                    <a href="assets/pdf/">
+                    <a href="assets/pdf/Rapport de stage .pdf">
                         <p class="text-md mt-4 button">Voir le rapport</p>
                     </a>
                 </div>
 
-                <!-- Colonne 3 : Bilan de Stage -->
-                <div
-                    class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center">
+                <!-- Bilan de Stage -->
+                <div class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center"
+                    data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
                     <h1 class="font-bold text-lg">Bilan de Stage</h1>
                     <p class="text-gray-400">Résumé du bilan</p>
                     <img src="assets/img/bilan.png" alt="bilan-stage" class="w-full h-[180px] object-cover rounded-lg">
-                    <a href="assets/pdf/Bilan de stage_Karen ANDRIANTASY.PDF"
+                    <a href="assets/pdf/Bilan de stage_Karen ANDRIANTASY.PDF">
                         <p class="text-md mt-4 button">Voir le bilan</p>
                     </a>
                 </div>
 
-                <!-- Colonne 4 : Attestation de Stage -->
-                <div
-                    class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center">
+                <!-- Attestation de Stage -->
+                <div class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center"
+                    data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <h1 class="font-bold text-lg">Attestation de Stage</h1>
                     <p class="text-gray-400">Document officiel</p>
                     <img src="assets/img/attestation.png" alt="attestation-stage"
@@ -443,9 +442,8 @@
                     </a>
                 </div>
             </div>
-
-
         </section>
+
 
         <!-- Lien vers le JS externe -->
         <script src="js/projets-tabs.js"></script>
@@ -458,4 +456,5 @@
             AOS.init();
         </script>
 </body>
+
 </html>
