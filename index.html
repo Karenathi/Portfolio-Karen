@@ -224,8 +224,8 @@
                     <div class="relative z-10 flex flex-col gap-16 lg:grid lg:grid-cols-2 lg:gap-y-20">
 
                         <!-- Bloc Frontend -->
-                        <div
-                            class="relative lg:col-start-1 lg:pr-10 lg:justify-self-end w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="relative lg:col-start-1 lg:pr-10 lg:justify-self-end w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded"
+                            data-aos="fade-left" data-aos-duration="1000">
                             <h3 class="text-xl font-bold text-red-600 mb-4">Frontend</h3>
                             <div class="grid grid-cols-3 gap-4 text-center">
                                 <div>
@@ -257,8 +257,8 @@
                         </div>
 
                         <!-- Bloc Backend -->
-                        <div
-                            class="relative lg:col-start-2 lg:pl-10 lg:justify-self-start w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded mt-10 lg:mt-0" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="relative lg:col-start-2 lg:pl-10 lg:justify-self-start w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded mt-10 lg:mt-0"
+                            data-aos="fade-right" data-aos-duration="1000">
                             <h3 class="text-xl font-bold text-red-600 mb-4">Backend</h3>
                             <div class="grid grid-cols-3 gap-4 text-center">
                                 <div>
@@ -281,7 +281,7 @@
                                     <i class="fab fa-react text-red-600 text-3xl"></i>
                                     <p class="text-sm text-gray-600 mt-1">Avancé</p>
                                 </div>
-                                
+
                                 <div>
                                     <p class="font-semibold">Python</p>
                                     <i class="fab fa-python text-red-600 text-3xl"></i>
@@ -291,8 +291,8 @@
                         </div>
 
                         <!-- Bloc Ops -->
-                        <div
-                            class="relative lg:col-start-1 lg:pr-10 lg:justify-self-end w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded"data-aos="fade-left" data-aos-duration="1000">
+                        <div class="relative lg:col-start-1 lg:pr-10 lg:justify-self-end w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded"
+                            data-aos="fade-left" data-aos-duration="1000">
                             <h3 class="text-xl font-bold text-red-600 mb-4">Ops</h3>
                             <div class="grid grid-cols-3 gap-4 text-center">
                                 <div>
@@ -314,8 +314,8 @@
                         </div>
 
                         <!-- Bloc Outils de design -->
-                        <div
-                            class="relative lg:col-start-2 lg:pl-10 lg:justify-self-start w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded mt-10 lg:mt-0" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="relative lg:col-start-2 lg:pl-10 lg:justify-self-start w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded mt-10 lg:mt-0"
+                            data-aos="fade-right" data-aos-duration="1000">
                             <h3 class="text-xl font-bold text-red-600 mb-4">Outils de design</h3>
                             <div class="grid grid-cols-4 gap-4 text-center">
                                 <div>
@@ -351,38 +351,104 @@
 
         <!--==================== PROJETS  ====================-->
         <section class="about section mt-10 md:mt-[5rem] justify-center text-center" id="projets">
-            <h1 class="text-3xl font-bold">Projets</h1>
+            <h1 class="text-3xl font-bold mb-6">Projets</h1>
 
-            <div
-                class="flex flex-col md:flex-row flex-wrap justify-center gap-20 p-6 items-center gap-10 cursor-pointer">
+            <!-- Onglets -->
+            <div class="flex justify-center gap-6 mb-8">
+                <button class="tab-btn px-6 py-2 rounded-lg bg-gray-200 text-gray-700 font-semibold" data-tab="tous">
+                    Tous les projets
+                </button>
+                <button class="tab-btn px-6 py-2 rounded-lg bg-pink-500 text-white font-semibold" data-tab="formation">
+                    Projets en Formation
+                </button>
+                <button class="tab-btn px-6 py-2 rounded-lg bg-gray-200 text-gray-700 font-semibold" data-tab="stage">
+                    Formation en entreprise
+                </button>
+            </div>
 
-                <div class="content flex flex-col gap-2" data-aos="fade-right" data-aos-duration="1000">
+            <!-- Contenu Formation -->
+            <div id="formation" class="tab-content flex flex-wrap justify-center gap-10 p-6">
+                <!-- Supercar Client -->
+                <div
+                    class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center">
                     <h1 class="font-bold">Supercar - Client</h1>
                     <p class="text-gray-400">Application Web</p>
-                    <img src="assets/img/supercar-client.png" alt="supercar-client" class="w-[500px]">
-
+                    <img src="assets/img/supercar-client.png" alt="supercar-client"
+                        class="w-full h-[180px] object-cover rounded-lg">
                     <a href="http://localhost:8888/supercar/">
                         <p class="text-md mt-4 button">Voir l'application</p>
                     </a>
                 </div>
 
-                <div class="content flex flex-col gap-2" data-aos="fade-right" data-aos-duration="1000">
+                <!-- Supercar Admin -->
+                <div
+                    class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center">
                     <h1 class="font-bold">Supercar - Admin</h1>
                     <p class="text-gray-400">Application Web</p>
-                    <img src="assets/img/supercar-admin.png" alt="supercar-client" class="w-[500px]">
-
+                    <img src="assets/img/supercar-admin.png" alt="supercar-admin"
+                        class="w-full h-[180px] object-cover rounded-lg">
                     <a href="http://localhost:8888/supercar-admin/">
                         <p class="text-md mt-4 button">Voir l'application</p>
                     </a>
                 </div>
-
-
-
             </div>
+
+
+            <!-- Contenu Stage -->
+            <div id="stage" class="tab-content hidden flex flex-wrap justify-center gap-10 p-6">
+                <!-- Colonne 1 : Projet principal -->
+                <div
+                    class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center">
+                    <h1 class="font-bold text-lg">Acensi - Moka, Maurice</h1>
+                    <p class="text-gray-400">Développement Full Stack d'un logiciel CRM</p>
+                    <img src="assets/img/stage-crm.png" alt="crm-stage"
+                        class="w-full h-[180px] object-cover rounded-lg">
+                    <a href="#">
+                        <p class="text-md mt-4 button">Présentation du projet</p>
+                    </a>
+                </div>
+
+                <!-- Colonne 2 : Rapport de Stage -->
+                <div
+                    class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center">
+                    <h1 class="font-bold text-lg">Rapport de Stage</h1>
+                    <p class="text-gray-400">Résumé du rapport</p>
+                    <img src="assets/img/rapport.png" alt="rapport-stage"
+                        class="w-full h-[180px] object-cover rounded-lg">
+                    <a href="assets/pdf/">
+                        <p class="text-md mt-4 button">Voir le rapport</p>
+                    </a>
+                </div>
+
+                <!-- Colonne 3 : Bilan de Stage -->
+                <div
+                    class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center">
+                    <h1 class="font-bold text-lg">Bilan de Stage</h1>
+                    <p class="text-gray-400">Résumé du bilan</p>
+                    <img src="assets/img/bilan.png" alt="bilan-stage" class="w-full h-[180px] object-cover rounded-lg">
+                    <a href="assets/pdf/Bilan de stage_Karen ANDRIANTASY.PDF"
+                        <p class="text-md mt-4 button">Voir le bilan</p>
+                    </a>
+                </div>
+
+                <!-- Colonne 4 : Attestation de Stage -->
+                <div
+                    class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center">
+                    <h1 class="font-bold text-lg">Attestation de Stage</h1>
+                    <p class="text-gray-400">Document officiel</p>
+                    <img src="assets/img/attestation.png" alt="attestation-stage"
+                        class="w-full h-[180px] object-cover rounded-lg">
+                    <a href="assets/pdf/Attestation de Stage_Karen ANDRIANTASY.PDF">
+                        <p class="text-md mt-4 button">Voir l'attestation</p>
+                    </a>
+                </div>
+            </div>
+
 
         </section>
 
-
+        <!-- Lien vers le JS externe -->
+        <script src="js/projets-tabs.js"></script>
 
         <!--==================== MAIN JS ====================-->
         <script src="js/class.js"></script>
@@ -391,7 +457,5 @@
         <script>
             AOS.init();
         </script>
-
 </body>
-
 </html>
