@@ -28,14 +28,33 @@
 
                 <!-- Desktop menu -->
                 <ul class="hidden md:flex space-x-6 items-center">
-                    <li><a href="#home"
+                    <li>
+                        <a href="#home"
                             class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">À
-                            Propos</a></li>
-                    <li><a href="#formation"
+                            Propos</a>
+                    </li>
+                    <li>
+                        <a href="#formation"
                             class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Formations</a>
                     </li>
-                    <li><a href="#skills"
-                            class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Compétences</a>
+
+                    <!-- Compétences avec sous-menu -->
+                    <li class="relative group">
+                        <button
+                            class="nav-link relative pb-1 flex items-center after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 group-hover:after:w-full focus:after:w-full ">
+                            Compétences <i class="fas fa-chevron-down ml-2 text-sm"></i>
+                        </button>
+
+                        <!-- Sous-menu -->
+                        <ul
+                            class="absolute left-0 mt-2 bg-white shadow-md rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out w-56 z-50">
+                            <li><a href="#techniques" class="block px-4 py-2 hover:bg-gray-100">Compétences
+                                    techniques</a></li>
+                            <li><a href="#langages" class="block px-4 py-2 hover:bg-gray-100">Langages de
+                                    programmation</a></li>
+                            <li><a href="#outils" class="block px-4 py-2 hover:bg-gray-100">Outils</a></li>
+                            <li><a href="#glpi" class="block px-4 py-2 hover:bg-gray-100">GLPI</a></li>
+                        </ul>
                     </li>
 
                     <!-- Projets avec sous-menu -->
@@ -48,35 +67,25 @@
                         <!-- Sous-menu -->
                         <ul
                             class="absolute left-0 mt-2 bg-white shadow-md rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out w-56 z-50">
-                            <li>
-                                <a href="#stage" class="block px-4 py-2 hover:bg-gray-100">Stage</a>
-                            </li>
-                            <li>
-                                <a href="#projets-formation" class="block px-4 py-2 hover:bg-gray-100">Projets en
-                                    formation</a>
-                            </li>
-                            <li>
-                                <a href="#projets-persos" class="block px-4 py-2 hover:bg-gray-100">Projets
-                                    personnels</a>
-                            </li>
+                            <li><a href="#stage" class="block px-4 py-2 hover:bg-gray-100">Stage</a></li>
+                            <li><a href="#projets-formation" class="block px-4 py-2 hover:bg-gray-100">Projets en
+                                    formation</a></li>
+                            <li><a href="#projets-persos" class="block px-4 py-2 hover:bg-gray-100">Projets
+                                    personnels</a></li>
                         </ul>
                     </li>
 
-
+                    <!-- Contact -->
                     <li class="relative group">
                         <i class="fas fa-envelope text-2xl cursor-pointer"></i>
-
-                        <!-- Bloc d'informations cachées -->
                         <div
                             class="absolute right-0 top-full mt-2 bg-white text-gray-700 p-4 rounded shadow-md opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0 translate-x-4 transition-all duration-300 ease-in-out">
-                            <p class=><strong class="text">Email :</strong> kar3nmitia@gmail.com</p>
-                            <p class=><strong class="text">Téléphone : <br></strong> <u>+230 57656260</u></p>
+                            <p><strong>Email :</strong> kar3nmitia@gmail.com</p>
+                            <p><strong>Téléphone : <br></strong> <u>+230 57656260</u></p>
                         </div>
                     </li>
-
                 </ul>
 
-                <!-- Responsive menu -->
                 <!-- Hamburger Icon -->
                 <div class="md:hidden">
                     <button id="menu-btn" class="focus:outline-none">
@@ -90,21 +99,38 @@
             </div>
 
             <!-- Mobile menu -->
-            <div id="menu" class="hidden md:hidden mt-4 space-y-2 px-4 text-left flex flex-col items-start w-full">
-
+            <div id="menu"
+                class="max-h-0 overflow-hidden transition-max-height md:hidden mt-4 space-y-2 px-4 text-left flex flex-col items-start w-full">
                 <a href="#home" class="nav-link block w-full">À propos</a>
                 <a href="#formation" class="nav-link block w-full">Formations</a>
-                <a href="#skills" class="nav-link block w-full">Compétences</a>
 
-                <!--  sous-menu mobile -->
-                <div class="w-full relative max-w-xs"> <!-- max-w-xs limite la largeur -->
+                <!-- Sous-menu mobile Compétences -->
+                <div class="w-full relative max-w-xs">
+                    <button id="mobile-competences-btn"
+                        class="w-full text-left nav-link flex justify-between items-center px-4 py-2 focus:outline-none">
+                        Compétences <i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                    <ul id="mobile-competences-menu"
+                        class="max-h-0 overflow-hidden flex-col mt-1 pl-4 space-y-1 w-full bg-white border border-gray-200 rounded-md shadow-md transition-max-height">
+                        <li><a href="#techniques"
+                                class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">Compétences techniques</a>
+                        </li>
+                        <li><a href="#langages" class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">Langages de
+                                programmation</a></li>
+                        <li><a href="#outils" class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">Outils</a>
+                        </li>
+                        <li><a href="#glpi" class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">GLPI</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sous-menu mobile Projets -->
+                <div class="w-full relative max-w-xs">
                     <button id="mobile-projets-btn"
-                        class="w-full text-left nav-link flex justify-between items-center px-4 py-2 border-b border-gray-200 focus:outline-none">
+                        class="w-full text-left nav-link flex justify-between items-center px-4 py-2 focus:outline-none">
                         Projets <i class="fas fa-chevron-down ml-2"></i>
                     </button>
-
                     <ul id="mobile-projets-menu"
-                        class="hidden flex-col mt-1 pl-4 space-y-1 w-full bg-white border border-gray-200 rounded-md shadow-md">
+                        class="max-h-0 overflow-hidden flex-col mt-1 pl-4 space-y-1 w-full bg-white border border-gray-200 rounded-md shadow-md transition-max-height">
                         <li><a href="#stage" class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">Stage</a></li>
                         <li><a href="#projets-formation"
                                 class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">Projets en formation</a>
@@ -113,26 +139,11 @@
                                 class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">Projets personnels</a></li>
                     </ul>
                 </div>
-
-
-                <a href="" class="w-full">
-                    <i class="fas fa-envelope text-2xl cursor-pointer"></i>
-                    <!-- Bloc d'informations cachées -->
-                    <div
-                        class="absolute right-0 top-full mt-2 bg-white text-gray-700 p-4 rounded shadow-md opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0 translate-x-4 transition-all duration-300 ease-in-out">
-                        <p><strong>Email :</strong> kar3nmitia@gmail.com</p>
-                        <p><strong>Téléphone :</strong> <br> <u>+230 57656260</u></p>
-                    </div>
-                </a>
             </div>
 
-
-            <!-- Responsive menu end  -->
-
-            </div>
         </nav>
-
     </header>
+
     <!--==================== MAIN ====================-->
     <main class="main mt-15 md:mt-[10rem]">
         <!--==================== HOME ====================-->
@@ -171,310 +182,82 @@
                         d="M50,-60C65,-50,75,-30,78,-10C80,10,75,30,65,45C55,60,40,70,20,75C0,80,-20,80,-35,70C-50,60,-60,40,-65,20C-70,0,-70,-20,-60,-35C-50,-50,-30,-60,-10,-70C10,-80,30,-75,50,-60Z"
                         transform="translate(100 100)" />
                 </svg>
-                <img src="assets/img/karen.png" alt="Karen" class="rounded-full object-cover shadow-lg" />
+                <img src="assets/img/karen.png" alt="Karen"
+                    class="max-w-full h-auto rounded-full object-cover shadow-lg" />
             </div>
         </section>
 
-
-
-        <!--==================== ABOUT ====================-->
-        <!-- <section class="about section mt-10 md:mt-[15rem] justify-center text-center" id="about">
-            <h1 class="text-3xl font-bold">À Propos de moi</h1>
-
-            <div class="flex flex-col md:flex-row flex-wrap justify-center gap-10 p-6 items-center">
-                <div class="p-4 w-[35rem] text-left flex flex-col gap-4" data-aos="fade-left" data-aos-duration=1500>
-
-                    <div class="flex flex-row gap-8">
-                        <i class="fas fa-laptop-code text-4xl"></i>
-                        <i class="fas fa-mobile-alt text-4xl"></i>
-                    </div>
-                    <p>Actuellement en formation, je conçois et développe des applications web et mobiles avec passion.
-                        De
-                        la
-                        création d’interfaces modernes à la gestion des bases de données, j’aime relever les défis
-                        techniques tout
-                        en plaçant l’expérience utilisateur au cœur de mes projets. Mon objectif ? Créer des solutions à
-                        la
-                        fois
-                        élégantes, efficaces et évolutives.</p>
-
-
-
-                </div>
-                <div data-aos="fade-right" data-aos-duration="1500">
-                    <img src="assets/img/about.png" alt="">
-                </div>
-            </div>
-
-        </section> -->
-
-
         <!--==================== FORMATIONS  ====================-->
-        <section class="formation section mt-10 md:mt-[10rem] justify-center text-center">
-            <h1 class="text-3xl font-bold" id="formation">Formations</h1>
+        <section class="formation section mt-10 md:mt-[10rem] justify-center text-center" id="formation">
+            <h1 class="text-3xl font-bold">Formations</h1>
 
             <div
                 class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-[5rem] md:gap-[5rem] mt-20">
                 <!-- Carte 1 -->
-                <div class=" card-hover-neon bg-white border border-gray-300 rounded-2xl shadow-md p-8 w-full max-w-sm text-center text-gray-800 cursor-pointer flex flex-col justify-between min-h-[300px]"
+                <div
+                    class=" card-hover-neon bg-white border border-gray-300 rounded-2xl shadow-md p-8 w-full max-w-sm text-center text-gray-800 cursor-pointer flex flex-col justify-between min-h-[300px]"
                     data-aos="fade-right" data-aos-duration="1000">
-                    <img src="assets/img/mcci-logo.png" alt="Logo" class="mx-auto mb-4 w-24 h-24 object-contain">
+                    <img src="assets/img/mcci-logo.png" alt="Logo" class="mx-auto mb-4 w-24 h-24 object-contain max-w-full">
                     <h1 class="text-2xl font-bold mb-2">MCCI Business School</h1>
                     <p>BTS Services Informatiques aux Organisations - 2ème année</p>
                 </div>
 
                 <!-- Carte 2 -->
-                <div class="  card-hover-neon bg-white border border-gray-300 rounded-2xl shadow-md p-8 w-full max-w-sm text-center text-gray-800 cursor-pointer flex flex-col justify-between min-h-[300px]"
+                <div
+                    class=" card-hover-neon bg-white border border-gray-300 rounded-2xl shadow-md p-8 w-full max-w-sm text-center text-gray-800 cursor-pointer flex flex-col justify-between min-h-[300px]"
                     data-aos="fade-right" data-aos-duration="1000">
-                    <img src="assets/img/hei-logo.png" alt="Logo" class="mx-auto mb-4 w-24 h-24 object-contain">
+                    <img src="assets/img/hei-logo.png" alt="Logo" class="mx-auto mb-4 w-24 h-24 object-contain max-w-full">
                     <h1 class="text-2xl font-bold mb-2">HEI Madagascar</h1>
                     <p>L1 et L2 en Informatique</p>
                 </div>
 
                 <!-- Carte 3 -->
-                <div class=" card-hover-neon bg-white border border-gray-300 rounded-2xl shadow-md p-8 w-full max-w-sm text-center text-gray-800 cursor-pointer flex flex-col justify-between min-h-[300px]"
+                <div
+                    class=" card-hover-neon bg-white border border-gray-300 rounded-2xl shadow-md p-8 w-full max-w-sm text-center text-gray-800 cursor-pointer flex flex-col justify-between min-h-[300px]"
                     data-aos="fade-right" data-aos-duration="1000">
-                    <img src="assets/img/lycee.png" alt="Logo" class="mx-auto mb-4 w-24 h-24 object-contain">
+                    <img src="assets/img/lycee.png" alt="Logo" class="mx-auto mb-4 w-24 h-24 object-contain max-w-full">
                     <h1 class="text-2xl font-bold mb-2">Lycée Saint Antoine Ankadifotsy</h1>
                     <p>Baccalauréat Scientifique</p>
                 </div>
             </div>
-
-
-        </section>
-
-        <!--==================== COMPETENCES  ====================-->
-        <section class="about section mt-10 md:mt-[15rem] justify-center text-center" id="skills">
-            <h1 class="text-3xl font-bold">Compétences</h1>
-
-            <section class="py-20 px-4 max-w-6xl mx-auto relative">
-                <h2 class="text-3xl font-bold text-center mb-16">Langages de programmation</h2>
-
-                <!-- Conteneur barre + blocs -->
-                <div class="relative">
-
-                    <!-- Barre verticale (centrée sur grand écran, à gauche sur mobile) -->
-                    <div
-                        class="absolute top-0 bottom-0 left-4 lg:left-1/2 transform lg:-translate-x-1/2 w-1 bg-red-600 z-0">
-                    </div>
-
-                    <!-- Blocs alignés en zigzag -->
-                    <div class="relative z-10 flex flex-col gap-16 lg:grid lg:grid-cols-2 lg:gap-y-20">
-
-                        <!-- Bloc Frontend -->
-                        <div class="relative lg:col-start-1 lg:pr-10 lg:justify-self-end w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded"
-                            data-aos="fade-left" data-aos-duration="1000">
-                            <h3 class="text-xl font-bold text-red-600 mb-4">Frontend</h3>
-                            <div class="grid grid-cols-3 gap-4 text-center">
-                                <div>
-                                    <p class="font-semibold">HTML</p>
-                                    <i class="fab fa-html5 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">CSS</p>
-                                    <i class="fab fa-css3-alt text-blue-600 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">JavaScript</p>
-                                    <i class="fab fa-js text-yellow-400 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">React JS</p>
-                                    <i class="fab fa-react text-sky-500 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Tailwind</p>
-                                    <i class="fas fa-wind text-cyan-400 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                                </div>
-
-                                <div>
-                                    <p class="font-semibold">Angular</p>
-                                    <i class="fab fa-angular text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                        <!-- Bloc Backend -->
-                        <div class="relative lg:col-start-2 lg:pl-10 lg:justify-self-start w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded mt-10 lg:mt-0"
-                            data-aos="fade-right" data-aos-duration="1000">
-                            <h3 class="text-xl font-bold text-red-600 mb-4">Backend</h3>
-                            <div class="grid grid-cols-3 gap-4 text-center">
-                                <div>
-                                    <p class="font-semibold">PHP</p>
-                                    <i class="fab fa-php text-indigo-600 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Java</p>
-                                    <i class="fab fa-java text-orange-600 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Node.js</p>
-                                    <i class="fab fa-node-js text-green-600 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Next.js</p>
-                                    <i class="fab fa-react text-sky-500 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Python</p>
-                                    <i class="fab fa-python text-blue-400 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bloc Ops -->
-                        <div class="relative lg:col-start-1 lg:pr-10 lg:justify-self-end w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded"
-                            data-aos="fade-left" data-aos-duration="1000">
-                            <h3 class="text-xl font-bold text-red-600 mb-4">Ops</h3>
-                            <div class="grid grid-cols-3 gap-4 text-center">
-                                <div>
-                                    <p class="font-semibold">AWS Lambda</p>
-                                    <i class="fab fa-aws text-orange-600 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Débutant</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">GitLab CI/CD</p>
-                                    <i class="fab fa-gitlab text-orange-500 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Débutant</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Docker</p>
-                                    <i class="fab fa-docker text-blue-600 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Débutant</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bloc Outils de design -->
-                        <div class="relative lg:col-start-2 lg:pl-10 lg:justify-self-start w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded mt-10 lg:mt-0"
-                            data-aos="fade-right" data-aos-duration="1000">
-                            <h3 class="text-xl font-bold text-red-600 mb-4">Outils de design</h3>
-                            <div class="grid grid-cols-4 gap-4 text-center">
-                                <div>
-                                    <p class="font-semibold">Figma</p>
-                                    <i class="fab fa-figma text-pink-600 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Lightroom</p>
-                                    <i class="fas fa-sliders-h text-orange-400 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Photoshop</p>
-                                    <i class="fas fa-image text-blue-600 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Canva</p>
-                                    <i class="fas fa-pen-nib text-green-600 text-3xl"></i>
-                                    <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
         </section>
 
         <!--==================== PROJETS  ====================-->
         <section class="about section mt-10 md:mt-[5rem] justify-center text-center" id="projets">
             <h1 class="text-3xl font-bold mb-6" data-aos="fade-down" data-aos-duration="800">Projets</h1>
 
-            <!-- Onglets -->
-            <!-- <div class="flex justify-center gap-6 mb-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                <button class="tab-btn px-6 py-2 rounded-lg bg-gray-200 text-gray-700 font-semibold" data-tab="tous">
-                    Tous les projets
-                </button>
-                <button class="tab-btn px-6 py-2 rounded-lg bg-pink-500 text-white font-semibold" data-tab="formation">
-                    Projets en Formation
-                </button>
-                <button class="tab-btn px-6 py-2 rounded-lg bg-gray-200 text-gray-700 font-semibold" data-tab="stage">
-                    Formation en entreprise
-                </button>
-            </div> -->
-
-
-            <h2 class="text-3xl font-bold mb-6" data-aos="fade-down" data-aos-duration="800" id="projets-formation">Projets en formation</h2>
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-down" data-aos-duration="800" id="projets-formation">
+                Projets en formation</h2>
             <!-- Contenu Formation -->
-            <div  class="tab-content flex flex-wrap justify-center gap-10 p-6 border border-gray-50 rounded-xl bg-gray-50
+            <div class="tab-content flex flex-wrap justify-center gap-10 p-6 border border-gray-50 rounded-xl bg-gray-50
             max-w-6xl mx-auto max-h-auto mb-20">
                 <!-- Supercar Client -->
-                <div class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center"
+                <div
+                    class="content flex flex-col gap-2 w-full max-w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center"
                     data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <h1 class="font-bold">Supercar - Client</h1>
                     <p class="text-gray-400">Application Web</p>
                     <img src="assets/img/supercar-client.png" alt="supercar-client"
-                        class="w-full h-[180px] object-cover rounded-lg">
+                        class="w-full h-[180px] object-cover rounded-lg max-w-full">
                     <a href="http://localhost:8888/supercar/">
                         <p class="text-md mt-4 button">Voir l'application</p>
                     </a>
                 </div>
 
                 <!-- Supercar Admin -->
-                <div class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center"
+                <div
+                    class="content flex flex-col gap-2 w-full max-w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center"
                     data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <h1 class="font-bold">Supercar - Admin</h1>
                     <p class="text-gray-400">Application Web</p>
                     <img src="assets/img/supercar-admin.png" alt="supercar-admin"
-                        class="w-full h-[180px] object-cover rounded-lg">
+                        class="w-full h-[180px] object-cover rounded-lg max-w-full">
                     <a href="http://localhost:8888/supercar-admin/">
                         <p class="text-md mt-4 button">Voir l'application</p>
                     </a>
                 </div>
             </div>
-
-
-
-
-
-            <!-- Contenu Stage -->
-            <h2 class="text-3xl font-bold mb-6" data-aos="fade-down mt-20" data-aos-duration="800">Stage</h2>
-            <div id="stage" class="tab-content flex flex-wrap justify-center gap-10 p-6 border border-gray-50 rounded-xl bg-gray-50
-            max-w-6xl mx-auto max-h-[90vh] mt-10">
-                <!-- Projet principal -->
-                <div class="content flex flex-col gap-2 w-[500px] h-[350px] bg-white shadow-md rounded-xl p-4 text-center"
-                    data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
-                    <h1 class="font-bold text-lg">Acensi - Moka, Maurice</h1>
-                    <p class="text-gray-400">Développement Full Stack d'un logiciel CRM</p>
-                    <img src="assets/img/stage-crm.png" alt="crm-stage"
-                        class="w-full h-[180px] object-cover rounded-lg">
-
-                    <!-- Boutons flex -->
-                    <div class="flex justify-center gap-4 mt-4">
-                        <a href="#" class="button text-md px-4 py-2 text-center">
-                            Présentation
-                        </a>
-                        <a href="#" class="button-border text-md px-4 py-2 text-center">
-                            Attestation
-                            <a href="#" class="button-border text-md px-4 py-2 text-center">
-                                Bilan
-                            </a>
-                    </div>
-
-
-
-
-
-                </div>
-            </div>
-
         </section>
-
 
         <!-- Lien vers le JS externe -->
         <script src="js/projets-tabs.js"></script>
