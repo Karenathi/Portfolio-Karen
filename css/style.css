@@ -167,15 +167,15 @@ body{
 
 @keyframes neon-glow {
   0%, 100% {
-      box-shadow: 0 0 10px #A31D1D, 0 0 20px #A31D1D, 0 0 30px #A31D1D;
+      box-shadow: 0 0 10px #DD0303, 0 0 20px #DD0303, 0 0 30px #DD0303;
   }
   50% {
-      box-shadow: 0 0 20px #A31D1D, 0 0 30px #A31D1D, 0 0 40px #A31D1D;
+      box-shadow: 0 0 20px #DD0303, 0 0 30px #DD0303, 0 0 40px #DD0303;
   }
 }
 
 .card-hover-neon:hover {
-  border: 2px solid #A31D1D;
+  border: 2px solid #DD0303;
   animation: neon-glow 1s infinite alternate;
   transition: all 2s ease-in-out;
 }

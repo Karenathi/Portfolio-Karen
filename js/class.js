@@ -8,43 +8,52 @@ menuBtn.addEventListener('click', () => {
 
 
 // project filter
-document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll(".tab-btn");
-  const contents = document.querySelectorAll(".tab-content");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const tabs = document.querySelectorAll(".tab-btn");
+//   const contents = document.querySelectorAll(".tab-content");
 
-  // Fonction pour afficher le bon onglet
-  function showTab(tabName) {
-      contents.forEach(c => {
-          if (tabName === "tous") {
-              // Afficher toutes les sections si "Tous" est sélectionné
-              c.classList.remove("hidden");
-          } else if (c.id === tabName) {
-              c.classList.remove("hidden");
-          } else {
-              c.classList.add("hidden");
-          }
-      });
+//   // Fonction pour afficher le bon onglet
+//   function showTab(tabName) {
+//       contents.forEach(c => {
+//           if (tabName === "tous") {
+//               // Afficher toutes les sections si "Tous" est sélectionné
+//               c.classList.remove("hidden");
+//           } else if (c.id === tabName) {
+//               c.classList.remove("hidden");
+//           } else {
+//               c.classList.add("hidden");
+//           }
+//       });
 
-      // Mettre à jour la couleur des onglets
-      tabs.forEach(t => {
-        if (t.dataset.tab === tabName) {
-            t.style.color = "var(--text-white)";
-            t.style.backgroundColor = "var(--bg-red)";
-        } else {
-            t.style.color = "black";
-            t.style.backgroundColor = "#E5E5E5"; 
-        }
-    });
+//       // Mettre à jour la couleur des onglets
+//       tabs.forEach(t => {
+//         if (t.dataset.tab === tabName) {
+//             t.style.color = "var(--text-white)";
+//             t.style.backgroundColor = "var(--bg-red)";
+//         } else {
+//             t.style.color = "black";
+//             t.style.backgroundColor = "#E5E5E5"; 
+//         }
+//     });
     
-  }
+//   }
 
-  // Activation au clic
-  tabs.forEach(tab => {
-      tab.addEventListener("click", () => {
-          showTab(tab.dataset.tab);
-      });
+//   // Activation au clic
+//   tabs.forEach(tab => {
+//       tab.addEventListener("click", () => {
+//           showTab(tab.dataset.tab);
+//       });
+//   });
+
+//   // Affichage par défaut : Formation
+//   showTab("formation");
+// });
+
+
+// sous-menu mobile pour Projets
+const mobileProjetsBtn = document.getElementById('mobile-projets-btn');
+  const mobileProjetsMenu = document.getElementById('mobile-projets-menu');
+
+  mobileProjetsBtn.addEventListener('click', () => {
+    mobileProjetsMenu.classList.toggle('hidden'); // montre / cache le menu
   });
-
-  // Affichage par défaut : Formation
-  showTab("formation");
-});
