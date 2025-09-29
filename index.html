@@ -38,52 +38,132 @@
                             class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Formations</a>
                     </li>
 
-                    <!-- Compétences avec sous-menu -->
+                    <!-- ==================== Compétences avec sous-menu ==================== -->
                     <li class="relative group">
-                        <button
-                            class="nav-link relative pb-1 flex items-center after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 group-hover:after:w-full focus:after:w-full ">
+                        <!-- Bouton parent -->
+                        <button class="nav-link relative pb-1 flex items-center 
+               after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 
+               after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 
+               group-hover:after:w-full focus:after:w-full">
                             Compétences <i class="fas fa-chevron-down ml-2 text-sm"></i>
                         </button>
 
-                        <!-- Sous-menu -->
-                        <ul
-                            class="absolute left-0 mt-2 bg-white shadow-md rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out w-56 z-50">
-                            <li><a href="#techniques" class="block px-4 py-2 hover:bg-gray-100">Compétences
-                                    techniques</a></li>
-                            <li><a href="#langages" class="block px-4 py-2 hover:bg-gray-100">Langages de
-                                    programmation</a></li>
-                            <li><a href="#outils" class="block px-4 py-2 hover:bg-gray-100">Outils</a></li>
-                            <li><a href="#glpi" class="block px-4 py-2 hover:bg-gray-100">GLPI</a></li>
+                        <!-- Dropdown -->
+                        <ul class="absolute left-0 mt-3 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 
+               opacity-0 invisible group-hover:opacity-100 group-hover:visible transform -translate-y-2 
+               group-hover:translate-y-0 transition-all duration-300 ease-out w-max z-50">
+
+                            <li>
+                                <a href="#techniques" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 
+                      transition-colors whitespace-nowrap">
+                                    <i class="fa-solid fa-bolt text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
+                                    Compétences techniques
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#langages" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 
+                      transition-colors whitespace-nowrap">
+                                    <i class="fa-solid fa-code text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
+                                    Langages de programmation
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#outils" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 
+                      transition-colors whitespace-nowrap">
+                                    <i
+                                        class="fa-solid fa-screwdriver-wrench text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
+                                    Outils
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#glpi" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 
+                      transition-colors whitespace-nowrap">
+                                    <i class="fa-solid fa-chart-line text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
+                                    GLPI
+                                </a>
+                            </li>
+
                         </ul>
                     </li>
 
-                    <!-- Projets avec sous-menu -->
+                    <!-- ==================== Projets avec sous-menu ==================== -->
                     <li class="relative group">
-                        <button
-                            class="nav-link relative pb-1 flex items-center after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 group-hover:after:w-full focus:after:w-full">
+                        <button class="nav-link relative pb-1 flex items-center 
+               after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 
+               after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 
+               group-hover:after:w-full focus:after:w-full">
                             Projets <i class="fas fa-chevron-down ml-2 text-sm"></i>
                         </button>
 
-                        <!-- Sous-menu -->
-                        <ul
-                            class="absolute left-0 mt-2 bg-white shadow-md rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out w-56 z-50">
-                            <li><a href="#stage" class="block px-4 py-2 hover:bg-gray-100">Stage</a></li>
-                            <li><a href="#projets-formation" class="block px-4 py-2 hover:bg-gray-100">Projets en
-                                    formation</a></li>
-                            <li><a href="#projets-persos" class="block px-4 py-2 hover:bg-gray-100">Projets
-                                    personnels</a></li>
+                        <!-- Dropdown -->
+                        <ul class="absolute left-0 mt-3 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 
+               opacity-0 invisible group-hover:opacity-100 group-hover:visible transform -translate-y-2 
+               group-hover:translate-y-0 transition-all duration-300 ease-out w-max z-50">
+
+                            <li>
+                                <a href="#stage" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 
+                      transition-colors whitespace-nowrap">
+                                    <i class="fa-solid fa-briefcase text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
+                                    Stage
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#projets-formation" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 
+                      transition-colors whitespace-nowrap">
+                                    <i
+                                        class="fa-solid fa-graduation-cap text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
+                                    Projets en formation
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#projets-persos" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 
+                      transition-colors whitespace-nowrap">
+                                    <i class="fa-solid fa-laptop-code text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
+                                    Projets personnels
+                                </a>
+                            </li>
+
                         </ul>
                     </li>
 
-                    <!-- Contact -->
+                    <!-- ==================== Contact amélioré avec underline ==================== -->
                     <li class="relative group">
-                        <i class="fas fa-envelope text-2xl cursor-pointer"></i>
-                        <div
-                            class="absolute right-0 top-full mt-2 bg-white text-gray-700 p-4 rounded shadow-md opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0 translate-x-4 transition-all duration-300 ease-in-out">
-                            <p><strong>Email :</strong> kar3nmitia@gmail.com</p>
-                            <p><strong>Téléphone : <br></strong> <u>+230 57656260</u></p>
+                        <i class="fas fa-envelope text-2xl cursor-pointer flex-shrink-0"></i>
+                        <div class="absolute right-0 top-full mt-3 w-max bg-white/95 backdrop-blur-md border border-gray-200/50 
+                shadow-lg p-4 opacity-0 invisible transform -translate-y-2 group-hover:opacity-100 
+                group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out">
+
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fa-solid fa-envelope text-[#A31D1D] w-5 flex-shrink-0"></i>
+                                <a href="mailto:kar3nmitia@gmail.com" class="relative text-gray-700 hover:text-[#A31D1D] 
+                      after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] 
+                      after:w-0 after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full 
+                      whitespace-nowrap">
+                                    <strong>Email :</strong> kar3nmitia@gmail.com
+                                </a>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-phone text-[#A31D1D] w-5 flex-shrink-0"></i>
+                                <a href="tel:+23057656260" class="relative text-gray-700 hover:text-[#A31D1D] 
+                      after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] 
+                      after:w-0 after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full 
+                      whitespace-nowrap">
+                                    <strong>Téléphone :</strong> +230 57656260
+                                </a>
+                            </div>
                         </div>
                     </li>
+
+
+
+
+
                 </ul>
 
                 <!-- Hamburger Icon -->
@@ -98,48 +178,6 @@
                 </div>
             </div>
 
-            <!-- Mobile menu -->
-            <div id="menu"
-                class="max-h-0 overflow-hidden transition-max-height md:hidden mt-4 space-y-2 px-4 text-left flex flex-col items-start w-full">
-                <a href="#home" class="nav-link block w-full">À propos</a>
-                <a href="#formation" class="nav-link block w-full">Formations</a>
-
-                <!-- Sous-menu mobile Compétences -->
-                <div class="w-full relative max-w-xs">
-                    <button id="mobile-competences-btn"
-                        class="w-full text-left nav-link flex justify-between items-center px-4 py-2 focus:outline-none">
-                        Compétences <i class="fas fa-chevron-down ml-2"></i>
-                    </button>
-                    <ul id="mobile-competences-menu"
-                        class="max-h-0 overflow-hidden flex-col mt-1 pl-4 space-y-1 w-full bg-white border border-gray-200 rounded-md shadow-md transition-max-height">
-                        <li><a href="#techniques"
-                                class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">Compétences techniques</a>
-                        </li>
-                        <li><a href="#langages" class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">Langages de
-                                programmation</a></li>
-                        <li><a href="#outils" class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">Outils</a>
-                        </li>
-                        <li><a href="#glpi" class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">GLPI</a></li>
-                    </ul>
-                </div>
-
-                <!-- Sous-menu mobile Projets -->
-                <div class="w-full relative max-w-xs">
-                    <button id="mobile-projets-btn"
-                        class="w-full text-left nav-link flex justify-between items-center px-4 py-2 focus:outline-none">
-                        Projets <i class="fas fa-chevron-down ml-2"></i>
-                    </button>
-                    <ul id="mobile-projets-menu"
-                        class="max-h-0 overflow-hidden flex-col mt-1 pl-4 space-y-1 w-full bg-white border border-gray-200 rounded-md shadow-md transition-max-height">
-                        <li><a href="#stage" class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">Stage</a></li>
-                        <li><a href="#projets-formation"
-                                class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">Projets en formation</a>
-                        </li>
-                        <li><a href="#projets-persos"
-                                class="block px-4 py-2 hover:bg-gray-100 rounded-md w-full">Projets personnels</a></li>
-                    </ul>
-                </div>
-            </div>
 
         </nav>
     </header>
@@ -401,6 +439,8 @@
                     </a>
                 </div>
             </div>
+
+
         </section>
 
         <!-- Lien vers le JS externe -->
