@@ -108,35 +108,38 @@ body{
 }
 /* navbar fin */
 
-
 /* profil */
 .image-container {
   position: relative;
-  width: 400px; 
-  height: 400px;
+  width: 450px;   /* agrandi */
+  height: 450px;
 }
 
 .image-container svg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 120%;
-  height: 120%;
+  top: 50%;
+  left: 50%;
+  width: 110%;    /* un peu plus grand que le conteneur */
+  height: 110%;
+  transform: translate(-50%, -50%);
   z-index: 0;
-  transform: translate(-10%, -10%); 
 }
 
 .image-container img {
   position: absolute;
-  top: 47%;
+  top: 50%;
   left: 50%;
-  width: 300px;
-  height: auto;
+  width: 88%;          /* image légèrement plus petite pour bien rentrer dans le rouge */
+  height: 88%;
+  object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: 1;
-  border-radius: 175px;
+  border-radius: 50%;  /* image ronde */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* halo blanc doux */
 }
 /* profil fin */
+
+
 
 
 /* animation zoom in  */
