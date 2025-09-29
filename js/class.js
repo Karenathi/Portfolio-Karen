@@ -1,24 +1,16 @@
-// Toggle menu mobile
+// Hamburger menu avec slide
 const menuBtn = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
+const menu = document.getElementById('menu');
 
 menuBtn.addEventListener('click', () => {
-    if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== "0px") {
-        mobileMenu.style.maxHeight = "0px";
-    } else {
-        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
-    }
+  if (menu.classList.contains("max-h-0")) {
+    menu.classList.remove("max-h-0");
+    menu.classList.add("max-h-screen"); // tu peux ajuster la hauteur max
+  } else {
+    menu.classList.add("max-h-0");
+    menu.classList.remove("max-h-screen");
+  }
 });
-
-// Toggle sous-menus mobile
-function toggleSubmenu(id) {
-    const submenu = document.getElementById(id);
-    if (submenu.style.maxHeight && submenu.style.maxHeight !== "0px") {
-        submenu.style.maxHeight = "0px";
-    } else {
-        submenu.style.maxHeight = submenu.scrollHeight + "px";
-    }
-}
 
 // Fonction générique pour toggle avec animation
 function toggleSubmenu(buttonId, menuId) {
