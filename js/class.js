@@ -39,3 +39,24 @@ document.querySelectorAll('[data-toggle]').forEach(btn => {
     btn.querySelector('i').classList.toggle('rotate-180');
   });
 });
+
+
+// Sélectionner tous les boutons de dropdown
+const dropdownButtons = document.querySelectorAll('#mobile-sidebar button');
+
+dropdownButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const ul = btn.nextElementSibling;
+    const isOpen = ul.style.maxHeight && ul.style.maxHeight !== '0px';
+
+    // Fermer tous les dropdowns
+    document.querySelectorAll('#mobile-sidebar ul').forEach(d => {
+      d.style.maxHeight = '0';
+    });
+
+    // Ouvrir celui cliqué
+    if (!isOpen) {
+      ul.style.maxHeight = ul.scrollHeight + "px";
+    }
+  });
+});

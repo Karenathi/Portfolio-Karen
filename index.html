@@ -19,243 +19,128 @@
 
 <body class="overflow-x-hidden">
     <!--==================== HEADER ====================-->
-    <!-- NAVBAR -->
-    <header class="header fixed top-0 left-0 right-0 z-50 shadow-md bg-white">
-        <div class="container mx-auto flex items-center justify-between p-3">
+   <!-- NAVBAR -->
+<header class="header fixed top-0 left-0 right-0 z-50 shadow-md bg-white">
+    <div class="container mx-auto flex items-center justify-between p-3">
 
-            <!-- Logo -->
-            <div class="text-4xl text-red-500 font-bold">
-                <i class="fa-solid fa-code"></i>
-            </div>
-
-            <!-- Hamburger mobile -->
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-700">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <!-- Desktop menu -->
-            <ul class="hidden md:flex space-x-6 items-center justify-center flex-nowrap w-full">
-                <li>
-                    <a href="#home"
-                        class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">À
-                        Propos</a>
-                </li>
-                <li>
-                    <a href="#formation"
-                        class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Formations</a>
-                </li>
-
-
-                <!-- Compétences Dropdown -->
-                <li class="relative group">
-                    <button class="nav-link relative pb-1 flex items-center">
-                        Compétences <i class="fas fa-chevron-down ml-2 text-sm"></i>
-                    </button>
-                    <ul class="absolute left-0 top-full bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50
-opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300
-ease-out w-max z-50">
-                        <li>
-                            <a href="#skills"
-                                class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap">
-                                <i class="fa-solid fa-bolt text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
-                                Compétences techniques
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#outils"
-                                class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap">
-                                <i
-                                    class="fa-solid fa-screwdriver-wrench text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
-                                Outils collaboratifs
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-
-                <!-- glpi -->
-                <li>
-                    <a href="#glpi"
-                        class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">GLPI</a>
-                </li>
-
-                <!-- tableau de synthese -->
-                <li>
-                    <a href="assets/pdf/tab.pdf"
-                        class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Tableau
-                        de synthèse</a>
-                </li>
-
-                <!-- veille tech -->
-                <li>
-                    <a href="#veille"
-                        class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">
-                        Veille Technologique</a>
-                </li>
-
-                <!-- Projets Dropdown -->
-                <li class="relative group">
-                    <button class="nav-link relative pb-1 flex items-center">
-                        Projets <i class="fas fa-chevron-down ml-2 text-sm"></i>
-                    </button>
-                    <ul class="absolute right-0 top-full bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50
-opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300
-ease-out w-max z-50">
-                        <li>
-                            <a href="#projets-formation"
-                                class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap">
-                                <i class="fa-solid fa-graduation-cap text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
-                                Projets en formation
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#stage"
-                                class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap">
-                                <i class="fa-solid fa-briefcase text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
-                                Stage en entreprise
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#projets-persos"
-                                class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap">
-                                <i class="fa-solid fa-laptop-code text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
-                                Projets personnels
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-            </ul>
-
-            <!-- Contact -->
-            <a href="#contact" class="absolute right-6 text-gray-700 hover:text-[#A31D1D] hidden md:inline">
-                <i class="fa-solid fa-envelope text-2xl"></i>
-            </a>
-        </div>
-    </header>
-
-    <!-- MOBILE SIDEBAR -->
-    <div id="mobile-sidebar"
-        class="fixed top-0 left-0 h-full w-75 bg-white/95 backdrop-blur-md shadow-lg transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
-
-        <!-- Header mobile -->
-        <div class="flex items-center justify-between p-4 border-b border-gray-200">
-            <div class="text-2xl font-bold text-red-500">
-                <i class="fa-solid fa-code"></i>
-            </div>
-            <button id="close-sidebar" class="text-2xl text-gray-700">
-                <i class="fas fa-times"></i>
-            </button>
+        <!-- Logo -->
+        <div class="text-4xl text-red-500 font-bold">
+            <i class="fa-solid fa-code"></i>
         </div>
 
-        <!-- Menu -->
-        <ul class="flex flex-col mt-4 gap-4 px-4">
+        <!-- Hamburger mobile -->
+        <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-700">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Desktop menu -->
+        <ul class="hidden md:flex space-x-6 items-center justify-center flex-nowrap w-full">
 
             <!-- Liens simples -->
-            <li>
-                <a href="#home"
-                    class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">
-                    À Propos
-                </a>
-            </li>
-            <li>
-                <a href="#formation"
-                    class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">
-                    Formations
-                </a>
-            </li>
+            <li><a href="#home" class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">À Propos</a></li>
+            <li><a href="#formation" class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Formations</a></li>
 
-            <!-- Dropdown Compétences -->
+            <!-- Compétences Dropdown -->
             <li class="relative group">
-                <button class="relative pb-1 flex justify-between w-full items-center">
-                    Compétences <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
-                </button>
-                <ul
-                    class="ml-2 mt-2 flex flex-col gap-2 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md overflow-hidden transition-all duration-300 ease-out max-h-0 group-hover:max-h-[500px] w-max max-w-max">
-                    <li>
-                        <a href="#skills"
-                            class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap">
-                            <i class="fa-solid fa-bolt text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
-                            Compétences techniques
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#outils"
-                            class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap">
-                            <i class="fa-solid fa-screwdriver-wrench text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
-                            Outils collaboratifs
-                        </a>
-                    </li>
+                <button class="nav-link relative pb-1 flex items-center">Compétences <i class="fas fa-chevron-down ml-2 text-sm"></i></button>
+                <ul class="absolute left-0 top-full bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out w-max z-50">
+                    <li><a href="#skills" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i class="fa-solid fa-bolt text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Compétences techniques</a></li>
+                    <li><a href="#outils" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i class="fa-solid fa-screwdriver-wrench text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Outils collaboratifs</a></li>
                 </ul>
             </li>
 
-            <!-- Liens simples -->
-            <li>
-                <a href="#glpi"
-                    class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">
-                    GLPI
-                </a>
-            </li>
-            <li>
-                <a href="assets/pdf/tab.pdf"
-                    class="relative pb-1 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">
-                    Tableau de synthèse
-                </a>
-            </li>
+            <!-- GLPI -->
+            <li><a href="#glpi" class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">GLPI</a></li>
+            <li><a href="assets/pdf/tab.pdf" class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Tableau de synthèse</a></li>
+            <li><a href="#veille" class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Veille Technologique</a></li>
 
-            <li>
-                <a href="#veille"
-                    class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">
-                    Veilles technologiques
-                </a>
-            </li>
-            <li>
-                <a href="#formation"
-                    class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">
-                    Formations
-                </a>
-            </li>
-
-            <!-- Dropdown Projets -->
+            <!-- Projets Dropdown -->
             <li class="relative group">
-                <button class="relative pb-1 flex justify-between w-full items-center">
-                    Projets <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
-                </button>
-                <ul
-                    class="ml-2 mt-2 flex flex-col gap-2 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md overflow-hidden transition-all duration-300 ease-out max-h-0 group-hover:max-h-[500px] w-max max-w-max">
-                    <li>
-                        <a href="#projets-formation"
-                            class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap">
-                            <i class="fa-solid fa-graduation-cap text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
-                            Projets en formation
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#stage"
-                            class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap">
-                            <i class="fa-solid fa-briefcase text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
-                            Stage en entreprise
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#projets-persos"
-                            class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap">
-                            <i class="fa-solid fa-laptop-code text-[#A31D1D] w-5 text-center flex-shrink-0"></i>
-                            Projets personnels
-                        </a>
-                    </li>
+                <button class="nav-link relative pb-1 flex items-center">Projets <i class="fas fa-chevron-down ml-2 text-sm"></i></button>
+                <ul class="absolute right-0 top-full bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out w-max z-50">
+                    <li><a href="#projets-formation" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i class="fa-solid fa-graduation-cap text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Projets en formation</a></li>
+                    <li><a href="#stage" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i class="fa-solid fa-briefcase text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Stage en entreprise</a></li>
+                    <li><a href="#projets-persos" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i class="fa-solid fa-laptop-code text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Projets personnels</a></li>
                 </ul>
-            </li>
-
-            <!-- Contact -->
-            <li>
-                <a href="#contact" class="flex items-center text-gray-700 hover:text-[#A31D1D] py-2">
-                    <i class="fa-solid fa-envelope text-2xl mr-2"></i> Contact
-                </a>
             </li>
         </ul>
+
+        <!-- Contact Dropdown Desktop -->
+        <div class="relative group">
+            <a href="#" class="hidden md:inline text-gray-700 hover:text-[#A31D1D] flex items-center">
+                <i class="fa-solid fa-envelope text-2xl"></i>
+            </a>
+            <ul class="absolute right-0 top-full mt-2 w-48 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col p-3 text-gray-700 text-sm z-50 w-max-content">
+                <li><a href="mailto:kar3nmitia@gmail.com" class="px-4 py-2 hover:text-[#A31D1D] flex items-center gap-2"><i class="fa-solid fa-envelope text-[#A31D1D] w-4"></i> kar3nmitia@gmail.com</a></li>
+                <li><a href="tel:+23057656260" class="px-4 py-2 hover:text-[#A31D1D] flex items-center gap-2"><i class="fa-solid fa-phone text-[#A31D1D] w-4"></i> +230 57656260</a></li>
+            </ul>
+        </div>
+
     </div>
+</header>
+
+<!-- MOBILE SIDEBAR -->
+<div id="mobile-sidebar"
+     class="fixed top-0 left-0 h-full w-75 bg-white/95 backdrop-blur-md shadow-lg transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+
+    <!-- Header mobile -->
+    <div class="flex items-center justify-between p-4 border-b border-gray-200">
+        <div class="text-2xl font-bold text-red-500">
+            <i class="fa-solid fa-code"></i>
+        </div>
+        <button id="close-sidebar" class="text-2xl text-gray-700">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Menu -->
+    <ul class="flex flex-col mt-4 gap-4 px-4">
+
+        <li><a href="#home" class="relative pb-1 hover:text-[#A31D1D]">À Propos</a></li>
+        <li><a href="#formation" class="relative pb-1 hover:text-[#A31D1D]">Formations</a></li>
+
+        <!-- Dropdown Compétences -->
+        <li class="relative group">
+            <button class="relative pb-1 flex justify-between w-full items-center">
+                Compétences <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
+            </button>
+            <ul class="ml-2 mt-2 flex flex-col gap-2 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md overflow-hidden max-h-0 transition-all duration-300 ease-out group-hover:max-h-[500px]">
+                <li><a href="#skills" class="px-4 py-2 hover:text-[#A31D1D]">Compétences techniques</a></li>
+                <li><a href="#outils" class="px-4 py-2 hover:text-[#A31D1D]">Outils collaboratifs</a></li>
+            </ul>
+        </li>
+
+        <!-- Liens simples -->
+        <li><a href="#glpi" class="relative pb-1 hover:text-[#A31D1D]">GLPI</a></li>
+        <li><a href="assets/pdf/tab.pdf" class="relative pb-1 hover:text-[#A31D1D]">Tableau de synthèse</a></li>
+        <li><a href="#veille" class="relative pb-1 hover:text-[#A31D1D]">Veille Technologique</a></li>
+
+        <!-- Dropdown Projets -->
+        <li class="relative group">
+            <button class="relative pb-1 flex justify-between w-full items-center">
+                Projets <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
+            </button>
+            <ul class="ml-2 mt-2 flex flex-col gap-2 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md overflow-hidden max-h-0 transition-all duration-300 ease-out group-hover:max-h-[500px]">
+                <li><a href="#projets-formation" class="px-4 py-2 hover:text-[#A31D1D]">Projets en formation</a></li>
+                <li><a href="#stage" class="px-4 py-2 hover:text-[#A31D1D]">Stage en entreprise</a></li>
+                <li><a href="#projets-persos" class="px-4 py-2 hover:text-[#A31D1D]">Projets personnels</a></li>
+            </ul>
+        </li>
+
+        <!-- Contact Dropdown Mobile -->
+        <li class="relative group">
+            <button class="flex justify-between w-full items-center text-gray-700 py-2">
+                <i class="fa-solid fa-envelope text-2xl mr-2"></i> Contact <i class="fas fa-chevron-down ml-2 text-sm"></i>
+            </button>
+            <ul class="ml-2 mt-2 flex flex-col gap-2 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md overflow-hidden max-h-0 transition-all duration-300 ease-out group-hover:max-h-[500px]">
+                <li><a href="mailto:kar3nmitia@gmail.com" class="px-4 py-2 hover:text-[#A31D1D] flex items-center gap-2"><i class="fa-solid fa-envelope text-[#A31D1D] w-4"></i> kar3nmitia@gmail.com</a></li>
+                <li><a href="tel:+23057656260" class="px-4 py-2 hover:text-[#A31D1D] flex items-center gap-2"><i class="fa-solid fa-phone text-[#A31D1D] w-4"></i> +230 57656260</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+
 
 
 
@@ -651,8 +536,8 @@ ease-out w-max z-50">
                                 Ce flux m'a permis de comprendre les meilleures pratiques Google Cloud et de suivre les
                                 innovations sur la plateforme.
                             </p>
-                            <a href="https://console.cloud.google.com/welcome/new?project=exalted-density-478006-n5" target="_blank"
-                                class="text-[#A31D1D] hover:underline flex items-center gap-2">
+                            <a href="https://console.cloud.google.com/welcome/new?project=exalted-density-478006-n5"
+                                target="_blank" class="text-[#A31D1D] hover:underline flex items-center gap-2">
                                 <i class="fa-solid fa-link"></i>
                                 Voir le flux
                             </a>
@@ -804,8 +689,7 @@ ease-out w-max z-50">
 
         </div>
         <div class="flex flex-row gap-4 justify-center" data-aos="fade-up">
-            <a href="assets/pdf/supercar.pdf" target="_blank"
-                class="button-border transition text-center">
+            <a href="assets/pdf/supercar.pdf" target="_blank" class="button-border transition text-center">
                 Présentation du projet
             </a>
             <a href="assets/pdf/Rapport de projet Supercar.pdf" target="_blank"
@@ -861,8 +745,7 @@ ease-out w-max z-50">
 
         <!-- Liens PDF -->
         <div class="flex flex-row gap-4 justify-center" data-aos="fade-up">
-            <a href="assets/pdf/stage.pdf" target="_blank"
-                class="button-border transition text-center">
+            <a href="assets/pdf/stage.pdf" target="_blank" class="button-border transition text-center">
                 Présentation du stage
             </a>
             <a href="assets/pdf/Rapport de stage .pdf" target="_blank" class="button-border transition text-center">
@@ -898,6 +781,8 @@ ease-out w-max z-50">
     <script>
         AOS.init();
     </script>
+
+    
 </body>
 
 </html>
