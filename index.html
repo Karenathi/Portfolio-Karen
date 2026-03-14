@@ -19,283 +19,725 @@
 
 <body class="overflow-x-hidden">
     <!--==================== HEADER ====================-->
-   <!-- NAVBAR -->
-<header class="header fixed top-0 left-0 right-0 z-50 shadow-md bg-white">
-    <div class="container mx-auto flex items-center justify-between p-3">
+    <!-- NAVBAR -->
+    <header class="header fixed top-0 left-0 right-0 z-50 shadow-md bg-white">
+        <div class="container mx-auto flex items-center justify-between p-3">
 
-        <!-- Logo -->
-        <div class="text-4xl text-red-500 font-bold">
-            <i class="fa-solid fa-code"></i>
+            <!-- Logo -->
+            <div class="text-4xl text-red-500 font-bold">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <!-- Hamburger mobile -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-700">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Desktop menu -->
+            <ul class="hidden md:flex space-x-6 items-center justify-center flex-nowrap w-full">
+
+                <!-- Liens simples -->
+                <li><a href="#home"
+                        class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">À
+                        Propos</a></li>
+                <li><a href="#formation"
+                        class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Formations</a>
+                </li>
+
+                <!-- Compétences Dropdown -->
+                <li class="relative group">
+                    <button class="nav-link relative pb-1 flex items-center">Compétences <i
+                            class="fas fa-chevron-down ml-2 text-sm"></i></button>
+                    <ul
+                        class="absolute left-0 top-full bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out w-max z-50">
+                        <li><a href="#skills"
+                                class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i
+                                    class="fa-solid fa-bolt text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Compétences
+                                techniques</a></li>
+                        <li><a href="#outils"
+                                class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i
+                                    class="fa-solid fa-screwdriver-wrench text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Outils
+                                collaboratifs</a></li>
+                    </ul>
+                </li>
+
+                <!-- GLPI -->
+                <li><a href="#glpi"
+                        class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">GLPI</a>
+                </li>
+                <li><a href="assets/pdf/tab.pdf"
+                        class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Tableau
+                        de synthèse</a></li>
+                <li><a href="#veille"
+                        class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Veille
+                        Technologique</a></li>
+
+                <!-- Projets Dropdown -->
+                <li class="relative group">
+                    <button class="nav-link relative pb-1 flex items-center">Projets <i
+                            class="fas fa-chevron-down ml-2 text-sm"></i></button>
+                    <ul
+                        class="absolute right-0 top-full bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out w-max z-50">
+                        <li><a href="#projets-formation"
+                                class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i
+                                    class="fa-solid fa-graduation-cap text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Projets
+                                en formation</a></li>
+                        <li><a href="#stage"
+                                class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i
+                                    class="fa-solid fa-briefcase text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Stage
+                                en entreprise</a></li>
+                        <li><a href="#projets-persos"
+                                class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i
+                                    class="fa-solid fa-laptop-code text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Projets
+                                personnels</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Contact Dropdown Desktop -->
+            <div class="relative group">
+                <a href="#" class="hidden md:inline text-gray-700 hover:text-[#A31D1D] flex items-center">
+                    <i class="fa-solid fa-envelope text-2xl"></i>
+                </a>
+                <ul
+                    class="absolute right-0 top-full mt-2 w-48 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col p-3 text-gray-700 text-sm z-50 w-max-content">
+                    <li><a href="mailto:kar3nmitia@gmail.com"
+                            class="px-4 py-2 hover:text-[#A31D1D] flex items-center gap-2"><i
+                                class="fa-solid fa-envelope text-[#A31D1D] w-4"></i> kar3nmitia@gmail.com</a></li>
+                    <li><a href="tel:+23057656260" class="px-4 py-2 hover:text-[#A31D1D] flex items-center gap-2"><i
+                                class="fa-solid fa-phone text-[#A31D1D] w-4"></i> +230 57656260</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- MOBILE SIDEBAR -->
+    <div id="mobile-sidebar"
+        class="fixed top-0 left-0 h-full w-75 bg-white/95 backdrop-blur-md shadow-lg transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+
+        <!-- Header mobile -->
+        <div class="flex items-center justify-between p-4 border-b border-gray-200">
+            <div class="text-2xl font-bold text-red-500">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <button id="close-sidebar" class="text-2xl text-gray-700">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
 
-        <!-- Hamburger mobile -->
-        <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-700">
-            <i class="fas fa-bars"></i>
-        </button>
+        <!-- Menu -->
+        <ul class="flex flex-col mt-4 gap-4 px-4">
 
-        <!-- Desktop menu -->
-        <ul class="hidden md:flex space-x-6 items-center justify-center flex-nowrap w-full">
+            <li><a href="#home" class="relative pb-1 hover:text-[#A31D1D]">À Propos</a></li>
+            <li><a href="#formation" class="relative pb-1 hover:text-[#A31D1D]">Formations</a></li>
+
+            <!-- Dropdown Compétences -->
+            <li class="relative group">
+                <button class="relative pb-1 flex justify-between w-full items-center">
+                    Compétences <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
+                </button>
+                <ul
+                    class="ml-2 mt-2 flex flex-col gap-2 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md overflow-hidden max-h-0 transition-all duration-300 ease-out group-hover:max-h-[500px]">
+                    <li><a href="#skills" class="px-4 py-2 hover:text-[#A31D1D]">Compétences techniques</a></li>
+                    <li><a href="#outils" class="px-4 py-2 hover:text-[#A31D1D]">Outils collaboratifs</a></li>
+                </ul>
+            </li>
 
             <!-- Liens simples -->
-            <li><a href="#home" class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">À Propos</a></li>
-            <li><a href="#formation" class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Formations</a></li>
+            <li><a href="#glpi" class="relative pb-1 hover:text-[#A31D1D]">GLPI</a></li>
+            <li><a href="assets/pdf/tab.pdf" class="relative pb-1 hover:text-[#A31D1D]">Tableau de synthèse</a></li>
+            <li><a href="#veille" class="relative pb-1 hover:text-[#A31D1D]">Veille Technologique</a></li>
 
-            <!-- Compétences Dropdown -->
+            <!-- Dropdown Projets -->
             <li class="relative group">
-                <button class="nav-link relative pb-1 flex items-center">Compétences <i class="fas fa-chevron-down ml-2 text-sm"></i></button>
-                <ul class="absolute left-0 top-full bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out w-max z-50">
-                    <li><a href="#skills" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i class="fa-solid fa-bolt text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Compétences techniques</a></li>
-                    <li><a href="#outils" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i class="fa-solid fa-screwdriver-wrench text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Outils collaboratifs</a></li>
+                <button class="relative pb-1 flex justify-between w-full items-center">
+                    Projets <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
+                </button>
+                <ul
+                    class="ml-2 mt-2 flex flex-col gap-2 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md overflow-hidden max-h-0 transition-all duration-300 ease-out group-hover:max-h-[500px]">
+                    <li><a href="#projets-formation" class="px-4 py-2 hover:text-[#A31D1D]">Projets en formation</a>
+                    </li>
+                    <li><a href="#stage" class="px-4 py-2 hover:text-[#A31D1D]">Stage en entreprise</a></li>
+                    <li><a href="#projets-persos" class="px-4 py-2 hover:text-[#A31D1D]">Projets personnels</a></li>
                 </ul>
             </li>
 
-            <!-- GLPI -->
-            <li><a href="#glpi" class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">GLPI</a></li>
-            <li><a href="assets/pdf/tab.pdf" class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Tableau de synthèse</a></li>
-            <li><a href="#veille" class="nav-link relative pb-1 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-[#A31D1D] after:transition-all after:duration-300 hover:after:w-full">Veille Technologique</a></li>
-
-            <!-- Projets Dropdown -->
+            <!-- Contact Dropdown Mobile -->
             <li class="relative group">
-                <button class="nav-link relative pb-1 flex items-center">Projets <i class="fas fa-chevron-down ml-2 text-sm"></i></button>
-                <ul class="absolute right-0 top-full bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out w-max z-50">
-                    <li><a href="#projets-formation" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i class="fa-solid fa-graduation-cap text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Projets en formation</a></li>
-                    <li><a href="#stage" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i class="fa-solid fa-briefcase text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Stage en entreprise</a></li>
-                    <li><a href="#projets-persos" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-[#A31D1D] hover:bg-red-50 whitespace-nowrap"><i class="fa-solid fa-laptop-code text-[#A31D1D] w-5 text-center flex-shrink-0"></i>Projets personnels</a></li>
+                <button class="flex justify-between w-full items-center text-gray-700 py-2">
+                    <i class="fa-solid fa-envelope text-2xl mr-2"></i> Contact <i
+                        class="fas fa-chevron-down ml-2 text-sm"></i>
+                </button>
+                <ul
+                    class="ml-2 mt-2 flex flex-col gap-2 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md overflow-hidden max-h-0 transition-all duration-300 ease-out group-hover:max-h-[500px]">
+                    <li><a href="mailto:kar3nmitia@gmail.com"
+                            class="px-4 py-2 hover:text-[#A31D1D] flex items-center gap-2"><i
+                                class="fa-solid fa-envelope text-[#A31D1D] w-4"></i> kar3nmitia@gmail.com</a></li>
+                    <li><a href="tel:+23057656260" class="px-4 py-2 hover:text-[#A31D1D] flex items-center gap-2"><i
+                                class="fa-solid fa-phone text-[#A31D1D] w-4"></i> +230 57656260</a></li>
                 </ul>
             </li>
+
         </ul>
-
-        <!-- Contact Dropdown Desktop -->
-        <div class="relative group">
-            <a href="#" class="hidden md:inline text-gray-700 hover:text-[#A31D1D] flex items-center">
-                <i class="fa-solid fa-envelope text-2xl"></i>
-            </a>
-            <ul class="absolute right-0 top-full mt-2 w-48 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col p-3 text-gray-700 text-sm z-50 w-max-content">
-                <li><a href="mailto:kar3nmitia@gmail.com" class="px-4 py-2 hover:text-[#A31D1D] flex items-center gap-2"><i class="fa-solid fa-envelope text-[#A31D1D] w-4"></i> kar3nmitia@gmail.com</a></li>
-                <li><a href="tel:+23057656260" class="px-4 py-2 hover:text-[#A31D1D] flex items-center gap-2"><i class="fa-solid fa-phone text-[#A31D1D] w-4"></i> +230 57656260</a></li>
-            </ul>
-        </div>
-
     </div>
-</header>
-
-<!-- MOBILE SIDEBAR -->
-<div id="mobile-sidebar"
-     class="fixed top-0 left-0 h-full w-75 bg-white/95 backdrop-blur-md shadow-lg transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
-
-    <!-- Header mobile -->
-    <div class="flex items-center justify-between p-4 border-b border-gray-200">
-        <div class="text-2xl font-bold text-red-500">
-            <i class="fa-solid fa-code"></i>
-        </div>
-        <button id="close-sidebar" class="text-2xl text-gray-700">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-
-    <!-- Menu -->
-    <ul class="flex flex-col mt-4 gap-4 px-4">
-
-        <li><a href="#home" class="relative pb-1 hover:text-[#A31D1D]">À Propos</a></li>
-        <li><a href="#formation" class="relative pb-1 hover:text-[#A31D1D]">Formations</a></li>
-
-        <!-- Dropdown Compétences -->
-        <li class="relative group">
-            <button class="relative pb-1 flex justify-between w-full items-center">
-                Compétences <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
-            </button>
-            <ul class="ml-2 mt-2 flex flex-col gap-2 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md overflow-hidden max-h-0 transition-all duration-300 ease-out group-hover:max-h-[500px]">
-                <li><a href="#skills" class="px-4 py-2 hover:text-[#A31D1D]">Compétences techniques</a></li>
-                <li><a href="#outils" class="px-4 py-2 hover:text-[#A31D1D]">Outils collaboratifs</a></li>
-            </ul>
-        </li>
-
-        <!-- Liens simples -->
-        <li><a href="#glpi" class="relative pb-1 hover:text-[#A31D1D]">GLPI</a></li>
-        <li><a href="assets/pdf/tab.pdf" class="relative pb-1 hover:text-[#A31D1D]">Tableau de synthèse</a></li>
-        <li><a href="#veille" class="relative pb-1 hover:text-[#A31D1D]">Veille Technologique</a></li>
-
-        <!-- Dropdown Projets -->
-        <li class="relative group">
-            <button class="relative pb-1 flex justify-between w-full items-center">
-                Projets <i class="fas fa-chevron-down ml-2 text-sm transition-transform duration-300"></i>
-            </button>
-            <ul class="ml-2 mt-2 flex flex-col gap-2 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md overflow-hidden max-h-0 transition-all duration-300 ease-out group-hover:max-h-[500px]">
-                <li><a href="#projets-formation" class="px-4 py-2 hover:text-[#A31D1D]">Projets en formation</a></li>
-                <li><a href="#stage" class="px-4 py-2 hover:text-[#A31D1D]">Stage en entreprise</a></li>
-                <li><a href="#projets-persos" class="px-4 py-2 hover:text-[#A31D1D]">Projets personnels</a></li>
-            </ul>
-        </li>
-
-        <!-- Contact Dropdown Mobile -->
-        <li class="relative group">
-            <button class="flex justify-between w-full items-center text-gray-700 py-2">
-                <i class="fa-solid fa-envelope text-2xl mr-2"></i> Contact <i class="fas fa-chevron-down ml-2 text-sm"></i>
-            </button>
-            <ul class="ml-2 mt-2 flex flex-col gap-2 bg-white/95 backdrop-blur-md shadow-lg border border-gray-200/50 rounded-md overflow-hidden max-h-0 transition-all duration-300 ease-out group-hover:max-h-[500px]">
-                <li><a href="mailto:kar3nmitia@gmail.com" class="px-4 py-2 hover:text-[#A31D1D] flex items-center gap-2"><i class="fa-solid fa-envelope text-[#A31D1D] w-4"></i> kar3nmitia@gmail.com</a></li>
-                <li><a href="tel:+23057656260" class="px-4 py-2 hover:text-[#A31D1D] flex items-center gap-2"><i class="fa-solid fa-phone text-[#A31D1D] w-4"></i> +230 57656260</a></li>
-            </ul>
-        </li>
-
-    </ul>
-</div>
-
-
-
 
     <!--==================== MAIN ====================-->
     <main class="main mt-[10rem] md:mt-[3rem] lg:mt-[6rem] xl:mt-[8rem]">
         <!--==================== HOME ====================-->
-        <section class="flex flex-col-reverse md:flex-row flex-wrap-reverse justify-center gap-6 md:gap-10 p-4 md:p-6"
-            id="home" data-aos="zoom-in" data-aos-duration=1500>
+        <section
+            class="relative flex flex-col-reverse md:flex-row flex-wrap-reverse justify-center items-center gap-8 md:gap-12 p-6 md:p-8 overflow-hidden"
+            id="home">
 
-            <!-- icônes de contact -->
-            <div class="content flex flex-row md:flex-col gap-6 md:gap-8 items-center justify-center">
-                <a href="https://github.com/Karenathi">
-                    <i class="fab fa-github text-4xl"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/karen-andriantasy-15a275274/">
-                    <i class="fab fa-linkedin text-4xl"></i>
-                </a>
+            <!-- Motifs de fond -->
+            <div class="absolute inset-0 -z-10 opacity-10">
+                <div
+                    class="absolute top-20 left-10 w-72 h-72 bg-red-600 rounded-full mix-blend-multiply filter blur-3xl animate-pulse">
+                </div>
+                <div
+                    class="absolute bottom-20 right-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-1000">
+                </div>
+                <div
+                    class="absolute top-40 right-1/4 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000">
+                </div>
             </div>
 
-            <!-- je suis Karen -->
-            <div class="content flex flex-col justify-center gap-2 text-center md:text-left">
-                <h1 class="text-4xl font-bold">
-                    Karen Andriantasy
+            <!-- Grille de points en arrière-plan -->
+            <div class="absolute inset-0 -z-10"
+                style="background-image: radial-gradient(#A31D1D 0.5px, transparent 0.5px); background-size: 30px 30px; opacity: 0.1;">
+            </div>
+
+            <!-- icônes de contact - verticales sur desktop, horizontales sur mobile -->
+            <div class="content flex flex-row md:flex-col gap-6 md:gap-8 items-center justify-center z-10">
+                <!-- GitHub avec effet -->
+                <a href="https://github.com/Karenathi"
+                    class="group relative w-14 h-14 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <i class="fab fa-github text-3xl text-gray-700 group-hover:scale-110 transition-transform"></i>
+                </a>
+
+                <!-- LinkedIn avec effet -->
+                <a href="https://www.linkedin.com/in/karen-andriantasy-15a275274/"
+                    class="group relative w-14 h-14 flex items-center justify-center rounded-full bg-blue-100 hover:bg-blue-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <i class="fab fa-linkedin text-3xl text-blue-700 group-hover:scale-110 transition-transform"></i>
+                </a>
+
+                <!-- Ajout d'un séparateur visuel -->
+                <div class="hidden md:block w-0.5 h-16 bg-gradient-to-b from-red-600 to-blue-600 rounded-full"></div>
+            </div>
+
+            <!-- Contenu principal - je suis Karen -->
+            <div class="content flex flex-col justify-center gap-3 text-center md:text-left z-10 max-w-2xl">
+                <!-- Nom -->
+                <h1 class="text-5xl md:text-6xl font-bold">
+                    <span class="bg-gradient-to-r from-red-600 to-blue-600 text-transparent bg-clip-text">
+                        Karen Andriantasy
+                    </span>
                 </h1>
-                <p class="text-2xl font-bold">Étudiante en Informatique & Développeur Full Stack</p>
-                <p class="w-full md:w-[25rem] mt-4">
+
+                <!-- Titre -->
+                <p class="text-xl md:text-2xl font-semibold text-gray-700">
+                    Étudiante en Informatique & Développeuse Full Stack
+                </p>
+
+                <!-- Description -->
+                <p class="text-gray-600 mt-4 leading-relaxed max-w-xl">
                     Actuellement en première année de BTS Services Informatiques aux Organisations, je me passionne pour
                     le développement web. Engagée et motivée, je m'efforce de renforcer mes compétences aussi bien en
                     développement frontend qu'en backend, avec l'objectif de les mettre en pratique dans des projets
                     concrets et innovants.
                 </p>
-                <a href="assets/pdf/cv.pdf"><button class="mt-2 button">Voir mon CV</button></a>
+
+                <!-- Bouton CV -->
+                <a href="assets/pdf/cv.pdf" class="mt-6 mx-auto md:mx-0">
+                    <button
+                        class="group relative px-8 py-3 bg-gradient-to-r from-red-600 to-blue-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                        <span class="relative z-10">Voir mon CV</span>
+                        <i class="fas fa-download ml-2 relative z-10"></i>
+                    </button>
+                </a>
             </div>
 
             <!-- profil -->
-            <div class="content image-container mx-auto md:mx-0 max-w-[250px] md:max-w-full">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#A31D1D"
-                        d="M50,-60C65,-50,75,-30,78,-10C80,10,75,30,65,45C55,60,40,70,20,75C0,80,-20,80,-35,70C-50,60,-60,40,-65,20C-70,0,-70,-20,-60,-35C-50,-50,-30,-60,-10,-70C10,-80,30,-75,50,-60Z"
-                        transform="translate(100 100)" />
-                </svg>
-                <img src="assets/img/karen.png" alt="Karen"
-                    class="max-w-full h-auto rounded-full object-cover shadow-lg" />
+            <div class="content image-container relative mx-auto md:mx-0 max-w-[280px] md:max-w-sm z-10">
+                <!-- SVG décoratif -->
+                <div class="absolute -inset-4 rounded-full overflow-hidden">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                        <path fill="url(#gradient)"
+                            d="M50,-60C65,-50,75,-30,78,-10C80,10,75,30,65,45C55,60,40,70,20,75C0,80,-20,80,-35,70C-50,60,-60,40,-65,20C-70,0,-70,-20,-60,-35C-50,-50,-30,-60,-10,-70C10,-80,30,-75,50,-60Z"
+                            transform="translate(100 100)" />
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#A31D1D;stop-opacity:0.2" />
+                                <stop offset="100%" style="stop-color:#2563EB;stop-opacity:0.2" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <!-- Image - SANS le cadre blanc -->
+                <div class="  overflow-hidden  aspect-square">
+                    <!-- Image -->
+                    <img src="assets/img/karen.png" alt="Karen Andriantasy" class="w-full  object-contain overflow-hidden"
+                        onerror="this.style.display='none'; this.parentNode.innerHTML += '<div class=\'w-full h-full flex items-center justify-center bg-gradient-to-br from-red-100 to-blue-100\'><i class=\'fas fa-user-circle text-8xl text-gray-400\'></i></div>'">
+                </div>
             </div>
+
         </section>
     </main>
 
+    <!-- Styles -->
+    <style>
+        @keyframes pulse {
 
-    <!--==================== FORMATIONS  ====================-->
-    <section id="formation" class=" pt-[100px] md:pt-[120px] mt-5 md:mt-10 justify-center text-center">
-        <h1 class="text-3xl font-bold" data-aos="fade-right" data-aos-duration="1500">Formations</h1>
+            0%,
+            100% {
+                opacity: 0.2;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.3;
+                transform: scale(1.05);
+            }
+        }
+
+        .animate-pulse {
+            animation: pulse 4s infinite;
+        }
+
+        .animation-delay-1000 {
+            animation-delay: 1s;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+    </style>
+
+
+
+    <!--==================== FORMATIONS ====================-->
+    <section id="formation" class="py-16 px-4 max-w-7xl mx-auto relative overflow-hidden">
+        <!-- Motifs de fond assortis -->
+        <div class="absolute inset-0 -z-10 opacity-10">
+            <div
+                class="absolute top-20 left-10 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse">
+            </div>
+            <div
+                class="absolute bottom-20 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-1000">
+            </div>
+            <div
+                class="absolute top-40 right-1/4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000">
+            </div>
+        </div>
+
+        <!-- Grille de points en arrière-plan -->
+        <div class="absolute inset-0 -z-10"
+            style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative">
+            <span class="bg-gradient-to-r from-red-600 to-blue-600 text-transparent bg-clip-text">Formations</span>
+            <span
+                class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 rounded-full"></span>
+        </h2>
+
+        <!-- Conteneur des cartes - CENTRÉ -->
         <div
-            class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-8 md:gap-[5rem] mt-10 md:mt-10">
-            <div class="card-hover-neon bg-white border border-gray-300 rounded-2xl shadow-md p-6 md:p-8 w-full max-w-sm text-center text-gray-800 cursor-pointer flex flex-col justify-between min-h-[250px] md:min-h-[300px]"
-                data-aos="fade-right" data-aos-duration="1000">
-                <img src="assets/img/mcci-logo.png" alt="Logo" class="mx-auto mb-4 w-24 h-24 object-contain max-w-full">
-                <h1 class="text-2xl font-bold mb-2">MCCI Business School</h1>
-                <p>BTS Services Informatiques aux Organisations - 2ème année</p>
+            class="relative z-10 flex flex-col items-center md:flex-row md:flex-wrap md:justify-center gap-8 md:gap-6 lg:gap-8 mt-10">
+
+            <!-- Carte MCCI Business School -->
+            <div
+                class="group relative w-full max-w-sm transition-all duration-300 hover:-translate-y-1 mx-auto md:mx-0">
+                <!-- Carte décorative arrière -->
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-red-600 to-orange-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300">
+                </div>
+
+                <!-- Contenu de la carte -->
+                <div
+                    class="relative bg-white rounded-2xl shadow-md border border-gray-200 hover:border-red-600/30 transition-all duration-300 p-6 flex flex-col h-full min-h-[320px]">
+                    <!-- Date en haut à droite (sans rond) -->
+                    <div class="absolute top-4 right-4">
+                        <span
+                            class="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">2024-2026</span>
+                    </div>
+
+                    <!-- Logo -->
+                    <div class="flex justify-center mb-4 mt-6">
+                        <div
+                            class="w-24 h-24 flex items-center justify-center rounded-full bg-gray-50 border border-gray-200 p-2">
+                            <img src="assets/img/mcci-logo.png" alt="Logo MCCI Business School"
+                                class="w-16 h-16 object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Titre -->
+                    <h3 class="text-xl font-bold text-center mb-2 text-gray-800">MCCI Business School</h3>
+
+                    <!-- Ligne décorative -->
+                    <div class="w-12 h-0.5 bg-gradient-to-r from-red-600 to-orange-500 rounded-full mx-auto mb-3"></div>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 text-sm text-center leading-relaxed flex-grow">
+                        BTS Services Informatiques aux Organisations<br>
+                        <span class="font-semibold text-red-600">1ère année et 2ème année</span>
+                    </p>
+                </div>
             </div>
-            <div class="card-hover-neon bg-white border border-gray-300 rounded-2xl shadow-md p-6 md:p-8 w-full max-w-sm text-center text-gray-800 cursor-pointer flex flex-col justify-between min-h-[250px] md:min-h-[300px]"
-                data-aos="fade-right" data-aos-duration="1500">
-                <img src="assets/img/hei-logo.png" alt="Logo" class="mx-auto mb-4 w-24 h-24 object-contain max-w-full">
-                <h1 class="text-2xl font-bold mb-2">HEI Madagascar</h1>
-                <p>L1 et L2 en Informatique</p>
+
+            <!-- Carte HEI Madagascar -->
+            <div
+                class="group relative w-full max-w-sm transition-all duration-300 hover:-translate-y-1 mx-auto md:mx-0">
+                <!-- Carte décorative arrière -->
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300">
+                </div>
+
+                <!-- Contenu de la carte -->
+                <div
+                    class="relative bg-white rounded-2xl shadow-md border border-gray-200 hover:border-blue-600/30 transition-all duration-300 p-6 flex flex-col h-full min-h-[320px]">
+                    <!-- Date en haut à droite (sans rond) -->
+                    <div class="absolute top-4 right-4">
+                        <span
+                            class="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">2022-2024</span>
+                    </div>
+
+                    <!-- Logo -->
+                    <div class="flex justify-center mb-4 mt-6">
+                        <div
+                            class="w-24 h-24 flex items-center justify-center rounded-full bg-gray-50 border border-gray-200 p-2">
+                            <img src="assets/img/hei-logo.png" alt="Logo HEI Madagascar"
+                                class="w-16 h-16 object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Titre -->
+                    <h3 class="text-xl font-bold text-center mb-2 text-gray-800">HEI Madagascar</h3>
+
+                    <!-- Ligne décorative -->
+                    <div class="w-12 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto mb-3">
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 text-sm text-center leading-relaxed flex-grow">
+                        Licence en Informatique<br>
+                        <span class="font-semibold text-blue-600">L1 et L2</span>
+                    </p>
+                </div>
             </div>
-            <div class="card-hover-neon bg-white border border-gray-300 rounded-2xl shadow-md p-6 md:p-8 w-full max-w-sm text-center text-gray-800 cursor-pointer flex flex-col justify-between min-h-[250px] md:min-h-[300px]"
-                data-aos="fade-right" data-aos-duration="2000">
-                <img src="assets/img/lycee.png" alt="Logo" class="mx-auto mb-4 w-24 h-24 object-contain max-w-full">
-                <h1 class="text-2xl font-bold mb-2">Lycée Saint Antoine Ankadifotsy</h1>
-                <p>Baccalauréat Scientifique</p>
+
+            <!-- Carte Lycée Saint Antoine -->
+            <div
+                class="group relative w-full max-w-sm transition-all duration-300 hover:-translate-y-1 mx-auto md:mx-0">
+                <!-- Carte décorative arrière -->
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300">
+                </div>
+
+                <!-- Contenu de la carte -->
+                <div
+                    class="relative bg-white rounded-2xl shadow-md border border-gray-200 hover:border-purple-600/30 transition-all duration-300 p-6 flex flex-col h-full min-h-[320px]">
+                    <!-- Date en haut à droite (sans rond) -->
+                    <div class="absolute top-4 right-4">
+                        <span
+                            class="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">2022</span>
+                    </div>
+
+                    <!-- Logo -->
+                    <div class="flex justify-center mb-4 mt-6">
+                        <div
+                            class="w-24 h-24 flex items-center justify-center rounded-full bg-gray-50 border border-gray-200 p-2">
+                            <img src="assets/img/lycee.png" alt="Logo Lycée Saint Antoine"
+                                class="w-16 h-16 object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Titre -->
+                    <h3 class="text-xl font-bold text-center mb-2 text-gray-800">Lycée Saint Antoine Ankadifotsy</h3>
+
+                    <!-- Ligne décorative -->
+                    <div class="w-12 h-0.5 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full mx-auto mb-3">
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 text-sm text-center leading-relaxed flex-grow">
+                        Baccalauréat<br>
+                        <span class="font-semibold text-purple-600">Scientifique</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Ligne de séparation décorative -->
+        <div class="mt-12 pt-4 flex justify-center">
+            <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-gray-400">
+                <span class="flex items-center gap-1"><i class="fas fa-graduation-cap text-red-600 text-xs"></i>
+                    BTS</span>
+                <span class="w-1 h-1 bg-gray-300 rounded-full hidden sm:block"></span>
+                <span class="flex items-center gap-1"><i class="fas fa-university text-blue-600 text-xs"></i>
+                    Licence</span>
+                <span class="w-1 h-1 bg-gray-300 rounded-full hidden sm:block"></span>
+                <span class="flex items-center gap-1"><i class="fas fa-school text-purple-600 text-xs"></i>
+                    Baccalauréat</span>
             </div>
         </div>
     </section>
 
-    <!--==================== COMPETENCES  ====================-->
-    <!-- competences techniques -->
-    <section id="skills" class="about section mt-20 md:mt-20 justify-center text-center">
-        <h1 class="text-3xl font-bold">Compétences techniques</h1>
-        <section class="py-10 px-4 max-w-6xl mx-auto relative" id="langages">
-            <h2 class="text-3xl font-bold text-center mb-16">Développement Web</h2>
+    <!--==================== COMPÉTENCES ====================-->
+    <section id="skills" class="about section py-16 md:py-20 justify-center text-center relative overflow-hidden">
+        <!-- Motifs de fond avec couleurs variées -->
+        <div class="absolute inset-0 -z-10 opacity-20">
+            <div
+                class="absolute top-20 left-10 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob">
+            </div>
+            <div
+                class="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000">
+            </div>
+            <div
+                class="absolute bottom-20 left-1/3 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000">
+            </div>
+            <div
+                class="absolute bottom-40 right-1/4 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-3000">
+            </div>
+        </div>
+
+        <!-- Grille de points en arrière-plan -->
+        <div class="absolute inset-0 -z-10"
+            style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+        <h1 class="text-4xl md:text-5xl font-bold mb-8 relative inline-block">
+            <span
+                class="bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 text-transparent bg-clip-text">Compétences
+                techniques</span>
+            <span
+                class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 rounded-full"></span>
+        </h1>
+
+        <!-- Développement Web -->
+        <section class="py-16 px-4 max-w-7xl mx-auto relative" id="langages">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-20 relative">
+                <span class="bg-gradient-to-r from-red-600 to-blue-600 text-transparent bg-clip-text">Développement
+                    Web</span>
+            </h2>
 
             <div class="relative">
+                <!-- Ligne de timeline centrale avec dégradé -->
                 <div
-                    class="absolute top-0 bottom-0 left-4 lg:left-1/2 transform lg:-translate-x-1/2 w-1 bg-red-600 hidden sm:block z-0">
+                    class="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-0.5 hidden lg:block bg-gradient-to-b from-red-600 via-purple-600 to-blue-600">
                 </div>
 
-                <div class="relative z-10 flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-y-20">
+                <!-- Points de la timeline avec couleurs -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full hidden lg:block bg-red-600 shadow-lg shadow-red-600/50"
+                    style="top: 20%;"></div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full hidden lg:block bg-blue-600 shadow-lg shadow-blue-600/50"
+                    style="top: 70%;"></div>
 
-                    <!-- Frontend -->
-                    <div class="relative lg:col-start-1 lg:pr-10 lg:justify-self-end w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded mx-auto max-w-full"
-                        data-aos="fade-left" data-aos-duration="1000">
-                        <h3 class="text-xl font-bold text-red-600 mb-4">Frontend</h3>
-                        <div class="grid grid-cols-3 gap-4 text-center">
-                            <div>
-                                <p class="font-semibold">HTML</p>
-                                <i class="fab fa-html5 text-3xl text-orange-600"></i>
-                                <p class="text-sm text-gray-600 mt-1">Avancé</p>
+                <div class="relative z-10 flex flex-col gap-16 lg:grid lg:grid-cols-2 lg:gap-x-12 lg:gap-y-24">
+
+                    <!-- Frontend - À gauche -->
+                    <div class="group relative lg:col-start-1 lg:justify-self-end w-full lg:w-[90%] flex"
+                        data-aos="fade-right" data-aos-duration="1000">
+                        <!-- Flèche de timeline -->
+                        <div
+                            class="absolute top-1/2 -right-4 transform -translate-y-1/2 w-8 h-8 hidden lg:flex items-center justify-center rounded-full z-20 bg-gradient-to-br from-red-600 to-orange-500 shadow-lg">
+                            <i class="fas fa-chevron-right text-white text-sm"></i>
+                        </div>
+
+                        <!-- Carte décorative arrière -->
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-red-600 to-orange-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000">
+                        </div>
+
+                        <!-- Contenu de la carte -->
+                        <div
+                            class="relative bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-200 hover:border-red-600/30 transition-all duration-500 w-full h-full flex flex-col">
+                            <!-- Badge avec icône au lieu du chiffre -->
+                            <div
+                                class="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-red-600 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                                <i class="fas fa-paint-brush text-white text-2xl"></i>
                             </div>
-                            <div>
-                                <p class="font-semibold">CSS</p>
-                                <i class="fab fa-css3-alt text-3xl text-blue-600"></i>
-                                <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">JavaScript</p>
-                                <i class="fab fa-js text-3xl text-yellow-400"></i>
-                                <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">React JS</p>
-                                <i class="fab fa-react text-3xl text-sky-500"></i>
-                                <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Next.js</p>
-                                <i class="fab fa-react text-3xl text-sky-500"></i>
-                                <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Tailwind</p>
-                                <i class="fas fa-wind text-3xl text-cyan-400"></i>
-                                <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Angular</p>
-                                <i class="fab fa-angular text-3xl text-red-600"></i>
-                                <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
+
+                            <h3 class="text-2xl font-bold mb-6 text-left">
+                                <span class="border-b-4 border-red-600 pb-2 text-red-600">Frontend</span>
+                            </h3>
+
+                            <!-- Grille ajustée pour éviter le scroll horizontal -->
+                            <div class="grid grid-cols-3 gap-3 sm:gap-4 flex-1">
+                                <!-- HTML -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-orange-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-orange-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-html5 text-3xl sm:text-4xl text-orange-600 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">HTML</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-orange-100 text-orange-700 rounded-full mt-1 relative z-10">Avancé</span>
+                                </div>
+
+                                <!-- CSS -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-blue-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-blue-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-css3-alt text-3xl sm:text-4xl text-blue-600 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">CSS</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-blue-100 text-blue-700 rounded-full mt-1 relative z-10">Avancé</span>
+                                </div>
+
+                                <!-- JavaScript -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-yellow-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-yellow-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-js text-3xl sm:text-4xl text-yellow-500 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">JavaScript</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-yellow-100 text-yellow-700 rounded-full mt-1 relative z-10">Avancé</span>
+                                </div>
+
+                                <!-- React -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-sky-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-sky-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-react text-3xl sm:text-4xl text-sky-500 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">React</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-sky-100 text-sky-700 rounded-full mt-1 relative z-10">Avancé</span>
+                                </div>
+
+                                <!-- Next.js -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-gray-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-gray-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-react text-3xl sm:text-4xl text-gray-800 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">Next.js</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-gray-100 text-gray-700 rounded-full mt-1 relative z-10">Avancé</span>
+                                </div>
+
+                                <!-- Tailwind -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-cyan-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-cyan-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fas fa-wind text-3xl sm:text-4xl text-cyan-500 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">Tailwind</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-cyan-100 text-cyan-700 rounded-full mt-1 relative z-10">Avancé</span>
+                                </div>
+
+                                <!-- Angular -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-red-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-red-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-angular text-3xl sm:text-4xl text-red-600 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">Angular</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-red-100 text-red-700 rounded-full mt-1 relative z-10">Intermédiaire</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Backend -->
-                    <div class="relative lg:col-start-2 lg:pl-10 lg:justify-self-start w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded mt-10 lg:mt-0 mx-auto max-w-full"
-                        data-aos="fade-right" data-aos-duration="1000">
-                        <h3 class="text-xl font-bold text-red-600 mb-4">Backend</h3>
-                        <div class="grid grid-cols-3 gap-4 text-center">
-                            <div>
-                                <p class="font-semibold">PHP</p>
-                                <i class="fab fa-php text-3xl text-indigo-600"></i>
-                                <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
+                    <!-- Backend - À droite -->
+                    <div class="group relative lg:col-start-2 lg:justify-self-start w-full lg:w-[90%] mt-8 lg:mt-0 flex"
+                        data-aos="fade-left" data-aos-duration="1000">
+                        <!-- Flèche de timeline -->
+                        <div
+                            class="absolute top-1/2 -left-4 transform -translate-y-1/2 w-8 h-8 hidden lg:flex items-center justify-center rounded-full z-20 bg-gradient-to-br from-blue-600 to-purple-600 shadow-lg">
+                            <i class="fas fa-chevron-left text-white text-sm"></i>
+                        </div>
+
+                        <!-- Carte décorative arrière -->
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000">
+                        </div>
+
+                        <!-- Contenu de la carte -->
+                        <div
+                            class="relative bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-200 hover:border-blue-600/30 transition-all duration-500 w-full h-full flex flex-col">
+                            <!-- Badge avec icône -->
+                            <div
+                                class="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                                <i class="fas fa-server text-white text-2xl"></i>
                             </div>
-                            <div>
-                                <p class="font-semibold">Java</p>
-                                <i class="fab fa-java text-3xl text-orange-600"></i>
-                                <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Node.js</p>
-                                <i class="fab fa-node-js text-3xl text-green-600"></i>
-                                <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Python</p>
-                                <i class="fab fa-python text-3xl text-blue-400"></i>
-                                <p class="text-sm text-gray-600 mt-1">Avancé</p>
+
+                            <h3 class="text-2xl font-bold mb-6 text-left">
+                                <span class="border-b-4 border-blue-600 pb-2 text-blue-600">Backend</span>
+                            </h3>
+
+                            <!-- Grille 4 colonnes -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 flex-1">
+                                <!-- PHP -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-indigo-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-indigo-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-php text-3xl sm:text-4xl text-indigo-600 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">PHP</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-indigo-100 text-indigo-700 rounded-full mt-1 relative z-10">Intermédiaire</span>
+                                </div>
+
+                                <!-- Java -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-orange-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-orange-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-java text-3xl sm:text-4xl text-orange-600 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">Java</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-orange-100 text-orange-700 rounded-full mt-1 relative z-10">Avancé</span>
+                                </div>
+
+                                <!-- Node.js -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-green-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-green-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-node-js text-3xl sm:text-4xl text-green-600 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">Node.js</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-green-100 text-green-700 rounded-full mt-1 relative z-10">Avancé</span>
+                                </div>
+
+                                <!-- Python -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-blue-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-blue-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-python text-3xl sm:text-4xl text-blue-500 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">Python</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-blue-100 text-blue-700 rounded-full mt-1 relative z-10">Avancé</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -305,63 +747,173 @@
         </section>
 
         <!-- Bases de données & Cloud -->
-        <section class="py-10 px-4 max-w-6xl mx-auto relative" id="cloud">
-            <h2 class="text-3xl font-bold text-center mb-16">Bases de données & Cloud</h2>
+        <section class="py-16 px-4 max-w-7xl mx-auto relative" id="cloud">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-20 relative">
+                <span class="bg-gradient-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text">Bases de
+                    données & Cloud</span>
+            </h2>
 
             <div class="relative">
+                <!-- Ligne de timeline centrale -->
                 <div
-                    class="absolute top-0 bottom-0 left-4 lg:left-1/2 transform lg:-translate-x-1/2 w-1 bg-red-600 hidden sm:block z-0">
+                    class="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-0.5 hidden lg:block bg-gradient-to-b from-purple-600 via-pink-600 to-red-600">
                 </div>
 
-                <div class="relative z-10 flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-y-20">
+                <!-- Points de la timeline -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full hidden lg:block bg-purple-600 shadow-lg shadow-purple-600/50"
+                    style="top: 30%;"></div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full hidden lg:block bg-pink-600 shadow-lg shadow-pink-600/50"
+                    style="top: 70%;"></div>
 
-                    <!-- Bases de données -->
-                    <div class="relative lg:col-start-1 lg:pr-10 lg:justify-self-end w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded mx-auto max-w-full"
-                        data-aos="fade-left" data-aos-duration="1000">
-                        <h3 class="text-xl font-bold text-red-600 mb-4">Bases de données</h3>
-                        <div class="grid grid-cols-3 gap-4 text-center">
-                            <div>
-                                <p class="font-semibold">MySQL</p>
-                                <i class="fas fa-database text-3xl text-gray-700"></i>
-                                <p class="text-sm text-gray-600 mt-1">Avancé</p>
+                <div class="relative z-10 flex flex-col gap-16 lg:grid lg:grid-cols-2 lg:gap-x-12 lg:gap-y-24">
+
+                    <!-- Bases de données - À gauche -->
+                    <div class="group relative lg:col-start-1 lg:justify-self-end w-full lg:w-[90%]"
+                        data-aos="fade-right" data-aos-duration="1000">
+                        <!-- Flèche de timeline -->
+                        <div
+                            class="absolute top-1/2 -right-4 transform -translate-y-1/2 w-8 h-8 hidden lg:flex items-center justify-center rounded-full z-20 bg-gradient-to-br from-purple-600 to-pink-600 shadow-lg">
+                            <i class="fas fa-chevron-right text-white text-sm"></i>
+                        </div>
+
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000">
+                        </div>
+
+                        <div
+                            class="relative bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-200 hover:border-purple-600/30 transition-all duration-500">
+                            <!-- Badge avec icône -->
+                            <div
+                                class="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center shadow-lg">
+                                <i class="fas fa-database text-white text-2xl"></i>
                             </div>
-                            <div>
-                                <p class="font-semibold">PostgreSQL</p>
-                                <i class="fas fa-database text-3xl text-blue-700"></i>
-                                <p class="text-sm text-gray-600 mt-1">Avancé</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Firebase</p>
-                                <i class="fas fa-fire text-3xl text-orange-500"></i>
-                                <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
+
+                            <h3 class="text-2xl font-bold mb-6 text-left">
+                                <span class="border-b-4 border-purple-600 pb-2 text-purple-600">Bases de données</span>
+                            </h3>
+
+                            <!-- Grille 3 colonnes -->
+                            <div class="grid grid-cols-3 gap-3 sm:gap-4">
+                                <!-- MySQL -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-gray-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-gray-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fas fa-database text-3xl sm:text-4xl text-gray-700 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">MySQL</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-gray-100 text-gray-700 rounded-full mt-1 relative z-10">Avancé</span>
+                                </div>
+
+                                <!-- PostgreSQL -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-blue-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-blue-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fas fa-database text-3xl sm:text-4xl text-blue-700 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">PostgreSQL</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-blue-100 text-blue-700 rounded-full mt-1 relative z-10">Avancé</span>
+                                </div>
+
+                                <!-- Firebase -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-orange-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-orange-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fas fa-fire text-3xl sm:text-4xl text-orange-500 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">Firebase</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-orange-100 text-orange-700 rounded-full mt-1 relative z-10">Intermédiaire</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Cloud / DevOps -->
-                    <div class="relative lg:col-start-2 lg:pl-10 lg:justify-self-start w-full lg:w-[85%] bg-gray-100 p-6 shadow-md rounded mt-10 lg:mt-0 mx-auto max-w-full"
-                        data-aos="fade-right" data-aos-duration="1000">
-                        <h3 class="text-xl font-bold text-red-600 mb-4">Cloud / DevOps</h3>
-                        <div class="grid grid-cols-3 gap-4 text-center">
-                            <div>
-                                <p class="font-semibold">AWS Lambda</p>
-                                <i class="fab fa-aws text-3xl text-orange-600"></i>
-                                <p class="text-sm text-gray-600 mt-1">Débutant</p>
+                    <!-- Cloud / DevOps - À droite -->
+                    <div class="group relative lg:col-start-2 lg:justify-self-start w-full lg:w-[90%] mt-8 lg:mt-0"
+                        data-aos="fade-left" data-aos-duration="1000">
+                        <!-- Flèche de timeline -->
+                        <div
+                            class="absolute top-1/2 -left-4 transform -translate-y-1/2 w-8 h-8 hidden lg:flex items-center justify-center rounded-full z-20 bg-gradient-to-br from-pink-600 to-red-600 shadow-lg">
+                            <i class="fas fa-chevron-left text-white text-sm"></i>
+                        </div>
+
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-pink-600 to-red-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000">
+                        </div>
+
+                        <div
+                            class="relative bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-200 hover:border-pink-600/30 transition-all duration-500">
+                            <!-- Badge avec icône -->
+                            <div
+                                class="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-pink-600 to-red-600 rounded-full flex items-center justify-center shadow-lg">
+                                <i class="fas fa-cloud text-white text-2xl"></i>
                             </div>
-                            <div>
-                                <p class="font-semibold">GitLab CI/CD</p>
-                                <i class="fab fa-gitlab text-3xl text-orange-500"></i>
-                                <p class="text-sm text-gray-600 mt-1">Débutant</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Docker</p>
-                                <i class="fab fa-docker text-3xl text-blue-600"></i>
-                                <p class="text-sm text-gray-600 mt-1">Débutant</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Vercel / Netlify</p>
-                                <i class="fas fa-rocket text-3xl text-red-500"></i>
-                                <p class="text-sm text-gray-600 mt-1">Intermédiaire</p>
+
+                            <h3 class="text-2xl font-bold mb-6 text-left">
+                                <span class="border-b-4 border-pink-600 pb-2 text-pink-600">Cloud / DevOps</span>
+                            </h3>
+
+                            <!-- Grille 4 colonnes -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+                                <!-- AWS Lambda -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-orange-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-orange-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-aws text-3xl sm:text-4xl text-orange-600 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">AWS</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-orange-100 text-orange-700 rounded-full mt-1 relative z-10">Débutant</span>
+                                </div>
+
+                                <!-- GitLab CI/CD -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-orange-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-orange-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-gitlab text-3xl sm:text-4xl text-orange-600 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">GitLab</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-orange-100 text-orange-700 rounded-full mt-1 relative z-10">Débutant</span>
+                                </div>
+
+                                <!-- Docker -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-blue-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-blue-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fab fa-docker text-3xl sm:text-4xl text-blue-600 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">Docker</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-blue-100 text-blue-700 rounded-full mt-1 relative z-10">Débutant</span>
+                                </div>
+
+                                <!-- Vercel/Netlify -->
+                                <div
+                                    class="group/tech relative flex flex-col items-center p-3 rounded-xl hover:bg-red-50 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-red-100 rounded-xl scale-0 group-hover/tech:scale-100 transition-transform duration-300">
+                                    </div>
+                                    <i
+                                        class="fas fa-rocket text-3xl sm:text-4xl text-red-500 relative z-10 group-hover/tech:scale-110 transition-transform"></i>
+                                    <p class="font-semibold text-xs sm:text-sm mt-1 relative z-10">Vercel</p>
+                                    <span
+                                        class="text-[10px] sm:text-xs px-1.5 py-0.5 bg-red-100 text-red-700 rounded-full mt-1 relative z-10">Intermédiaire</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -369,60 +921,220 @@
                 </div>
             </div>
         </section>
-
-
     </section>
 
-    <!-- outils collaboratifs -->
-    <section id="outils" class="py-10 text-center">
-        <h1 class="text-3xl font-bold mb-6">Outils collaboratifs</h1>
-        <div class="flex flex-wrap justify-center gap-12">
+    <!-- Styles -->
+    <style>
+        @keyframes blob {
 
-            <!-- GitHub -->
-            <div class="flex flex-col items-center">
-                <i class="fa-brands fa-github text-5xl text-black"></i>
-                <span class="mt-2 text-sm font-medium">GitHub</span>
+            0%,
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 10s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
+        /* Animation au survol */
+        .group:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+
+
+    <!-- Outils collaboratifs -->
+    <section id="outils" class="py-16 px-4 max-w-7xl mx-auto relative overflow-hidden">
+        <!-- Motifs de fond assortis aux compétences -->
+        <div class="absolute inset-0 -z-10 opacity-10">
+            <div
+                class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob">
+            </div>
+            <div
+                class="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000">
+            </div>
+            <div
+                class="absolute top-40 right-1/4 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000">
+            </div>
+        </div>
+
+        <!-- Grille de points en arrière-plan -->
+        <div class="absolute inset-0 -z-10"
+            style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative">
+            <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Outils
+                collaboratifs</span>
+            <span
+                class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></span>
+        </h2>
+
+        <!-- Conteneur avec effet de carte globale -->
+        <div class="relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-200 p-8 md:p-12">
+            <!-- Badge décoratif -->
+            <div
+                class="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                <i class="fas fa-users text-white text-2xl"></i>
             </div>
 
-            <!-- GitLab -->
-            <div class="flex flex-col items-center">
-                <i class="fa-brands fa-gitlab text-5xl text-orange-600"></i>
-                <span class="mt-2 text-sm font-medium">GitLab</span>
+            <!-- Grille des outils -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6 md:gap-8">
+
+                <!-- GitHub -->
+                <div
+                    class="group/outil relative flex flex-col items-center p-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-2 bg-white/50 hover:bg-white">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-50 rounded-xl scale-0 group-hover/outil:scale-100 transition-transform duration-300">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 group-hover/outil:bg-gray-200 transition-all duration-300">
+                            <i
+                                class="fa-brands fa-github text-4xl text-gray-800 group-hover/outil:scale-110 transition-transform"></i>
+                        </div>
+                        <span class="mt-3 text-sm font-semibold text-gray-700">GitHub</span>
+                        <span class="text-xs text-gray-500 mt-1">Versionnement</span>
+                    </div>
+                </div>
+
+                <!-- GitLab -->
+                <div
+                    class="group/outil relative flex flex-col items-center p-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-2 bg-white/50 hover:bg-white">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl scale-0 group-hover/outil:scale-100 transition-transform duration-300">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center rounded-full bg-orange-50 group-hover/outil:bg-orange-100 transition-all duration-300">
+                            <i
+                                class="fa-brands fa-gitlab text-4xl text-orange-600 group-hover/outil:scale-110 transition-transform"></i>
+                        </div>
+                        <span class="mt-3 text-sm font-semibold text-gray-700">GitLab</span>
+                        <span class="text-xs text-gray-500 mt-1">Intégration continue</span>
+                    </div>
+                </div>
+
+                <!-- Figma -->
+                <div
+                    class="group/outil relative flex flex-col items-center p-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-2 bg-white/50 hover:bg-white">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl scale-0 group-hover/outil:scale-100 transition-transform duration-300">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center rounded-full bg-pink-50 group-hover/outil:bg-pink-100 transition-all duration-300">
+                            <i
+                                class="fa-brands fa-figma text-4xl text-pink-500 group-hover/outil:scale-110 transition-transform"></i>
+                        </div>
+                        <span class="mt-3 text-sm font-semibold text-gray-700">Figma</span>
+                        <span class="text-xs text-gray-500 mt-1">Maquettage</span>
+                    </div>
+                </div>
+
+                <!-- Trello -->
+                <div
+                    class="group/outil relative flex flex-col items-center p-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-2 bg-white/50 hover:bg-white">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl scale-0 group-hover/outil:scale-100 transition-transform duration-300">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center rounded-full bg-blue-50 group-hover/outil:bg-blue-100 transition-all duration-300">
+                            <i
+                                class="fa-brands fa-trello text-4xl text-blue-500 group-hover/outil:scale-110 transition-transform"></i>
+                        </div>
+                        <span class="mt-3 text-sm font-semibold text-gray-700">Trello</span>
+                        <span class="text-xs text-gray-500 mt-1">Gestion de projet</span>
+                    </div>
+                </div>
+
+                <!-- Microsoft Teams -->
+                <div
+                    class="group/outil relative flex flex-col items-center p-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-2 bg-white/50 hover:bg-white">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl scale-0 group-hover/outil:scale-100 transition-transform duration-300">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center rounded-full bg-indigo-50 group-hover/outil:bg-indigo-100 transition-all duration-300">
+                            <img src="https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg" alt="Teams"
+                                class="w-8 h-8 group-hover/outil:scale-110 transition-transform">
+                        </div>
+                        <span class="mt-3 text-sm font-semibold text-gray-700">Teams</span>
+                        <span class="text-xs text-gray-500 mt-1">Communication</span>
+                    </div>
+                </div>
+
+                <!-- Jira -->
+                <div
+                    class="group/outil relative flex flex-col items-center p-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-2 bg-white/50 hover:bg-white">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl scale-0 group-hover/outil:scale-100 transition-transform duration-300">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center rounded-full bg-blue-50 group-hover/outil:bg-blue-100 transition-all duration-300">
+                            <img src="https://cdn.worldvectorlogo.com/logos/jira-3.svg" alt="Jira"
+                                class="w-8 h-8 group-hover/outil:scale-110 transition-transform">
+                        </div>
+                        <span class="mt-3 text-sm font-semibold text-gray-700">Jira</span>
+                        <span class="text-xs text-gray-500 mt-1">Suivi de projet</span>
+                    </div>
+                </div>
+
+                <!-- Monday.com -->
+                <div
+                    class="group/outil relative flex flex-col items-center p-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-2 bg-white/50 hover:bg-white">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl scale-0 group-hover/outil:scale-100 transition-transform duration-300">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center rounded-full bg-yellow-50 group-hover/outil:bg-yellow-100 transition-all duration-300">
+                            <img src="https://cdn.worldvectorlogo.com/logos/monday-1.svg" alt="Monday.com"
+                                class="w-8 h-8 group-hover/outil:scale-110 transition-transform">
+                        </div>
+                        <span class="mt-3 text-sm font-semibold text-gray-700">Monday</span>
+                        <span class="text-xs text-gray-500 mt-1">Planification</span>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Figma -->
-            <div class="flex flex-col items-center">
-                <i class="fa-brands fa-figma text-5xl text-pink-500"></i>
-                <span class="mt-2 text-sm font-medium">Figma</span>
+            <!-- Ligne de séparation décorative -->
+            <div
+                class="mt-8 pt-6 border-t border-gray-200 flex flex-wrap justify-center gap-4 md:gap-8 text-sm text-gray-500">
+                <span class="flex items-center gap-1"><i class="fas fa-check-circle text-green-500 text-xs"></i>
+                    Versionnement</span>
+                <span class="flex items-center gap-1"><i class="fas fa-check-circle text-green-500 text-xs"></i>
+                    Maquettage</span>
+                <span class="flex items-center gap-1"><i class="fas fa-check-circle text-green-500 text-xs"></i> Gestion
+                    de projet</span>
+                <span class="flex items-center gap-1"><i class="fas fa-check-circle text-green-500 text-xs"></i>
+                    Communication</span>
+                <span class="flex items-center gap-1"><i class="fas fa-check-circle text-green-500 text-xs"></i>
+                    Intégration continue</span>
             </div>
-
-            <!-- Trello -->
-            <div class="flex flex-col items-center">
-                <i class="fa-brands fa-trello text-5xl text-blue-500"></i>
-                <span class="mt-2 text-sm font-medium">Trello</span>
-            </div>
-
-            <!-- Microsoft Teams -->
-            <div class="flex flex-col items-center">
-                <img src="https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg" alt="Teams" class="w-12 h-12">
-                <span class="mt-2 text-sm font-medium">Teams</span>
-            </div>
-
-            <!-- Jira -->
-            <div class="flex flex-col items-center">
-                <img src="https://cdn.worldvectorlogo.com/logos/jira-3.svg" alt="Jira" class="w-12 h-12">
-                <span class="mt-2 text-sm font-medium">Jira</span>
-            </div>
-
-            <!-- Monday.com -->
-            <div class="flex flex-col items-center">
-                <img src="https://cdn.worldvectorlogo.com/logos/monday-1.svg" alt="Monday.com" class="w-12 h-12">
-                <span class="mt-2 text-sm font-medium">Monday.com</span>
-            </div>
-
         </div>
     </section>
-
 
     <!--==================== GLPI  ====================-->
     <section id="glpi" class="py-16 text-center">
@@ -782,7 +1494,7 @@
         AOS.init();
     </script>
 
-    
+
 </body>
 
 </html>
