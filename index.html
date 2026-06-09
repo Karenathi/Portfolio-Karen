@@ -1456,643 +1456,367 @@
 
 
     <!--==================== TABLEAU DE SYNTHESE  ====================-->
+<!--==================== VEILLE TECHNOLOGIQUE ====================-->
+<section id="veille" class="py-16 md:py-24 relative overflow-hidden">
 
+    <div class="absolute inset-0 -z-10 opacity-30"
+        style="background-image: radial-gradient(#A31D1D 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
 
-    <!--==================== VEILLE TECHNOLOGIQUE ====================-->
-    <section id="veille" class="py-16 md:py-24 relative overflow-hidden">
-        <!-- Motifs de fond animés -->
-        <div class="absolute inset-0 -z-10 opacity-20">
-            <div
-                class="absolute top-20 left-10 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob">
-            </div>
-            <div
-                class="absolute bottom-20 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000">
-            </div>
-            <div
-                class="absolute top-40 right-1/4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000">
-            </div>
-            <div
-                class="absolute bottom-40 left-1/3 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-3000">
-            </div>
+    <div class="container mx-auto px-4 relative z-10">
+
+        <!-- En-tête -->
+        <div class="text-center mb-16" data-aos="fade-down">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 relative inline-block">
+                <span class="bg-gradient-to-r from-red-600 to-blue-600 text-transparent bg-clip-text">
+                    Veille Technologique
+                </span>
+                <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 rounded-full"></span>
+            </h1>
+            <p class="text-gray-500 mt-8 text-lg max-w-xl mx-auto">
+                Je suis les dernières tendances du <span class="font-semibold text-blue-600">Cloud Computing</span> pour mieux comprendre le déploiement d'applications — mis en pratique avec Vercel dans mes projets.
+            </p>
         </div>
 
-        <!-- Grille de points en arrière-plan -->
-        <div class="absolute inset-0 -z-10 opacity-30"
-            style="background-image: radial-gradient(#A31D1D 1px, transparent 1px); background-size: 30px 30px;">
-        </div>
+        <!-- 3 cartes en grille -->
+        <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
 
-        <div class="container mx-auto px-4 relative z-10">
-            <!-- En-tête avec effet -->
-            <div class="text-center mb-12" data-aos="fade-down">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4 relative inline-block">
-                    <span class="bg-gradient-to-r from-red-600 to-blue-600 text-transparent bg-clip-text">
-                        Veille Technologique
-                    </span>
-                    <span
-                        class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 rounded-full"></span>
-                </h1>
-                <h2 class="text-2xl md:text-3xl font-semibold mt-6 text-gray-700">
-                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Cloud
-                        Computing & DevOps</span>
-                </h2>
-            </div>
-
-            <div class="max-w-4xl mx-auto">
-                <!-- Carte de présentation avec effet -->
-                <div class="relative mb-16 group" data-aos="fade-up">
-                    <div
-                        class="absolute -inset-1 bg-gradient-to-r from-red-600 to-blue-600 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300">
-                    </div>
-                    <div class="relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-200">
-                        <div class="flex justify-center mb-6">
-                            <div
-                                class="w-20 h-20 bg-gradient-to-br from-red-600 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                                <i class="fa-solid fa-eye text-white text-3xl"></i>
-                            </div>
-                        </div>
-                        <p class="text-lg text-gray-700 text-center leading-relaxed">
-                            J'ai suivi les dernières tendances sur le Cloud et le DevOps pour comprendre les bonnes
-                            pratiques de
-                            déploiement d'applications, la gestion d'infrastructures cloud,
-                            l'automatisation CI/CD et l'Infrastructure as Code. Cette veille m'a permis de découvrir des
-                            outils
-                            et méthodes pour rendre les systèmes plus fiables et scalables.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Flux RSS avec design amélioré -->
-                <div class="mb-20" data-aos="fade-right">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
-                        <div
-                            class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
-                            <i class="fa-solid fa-rss text-white text-xl"></i>
-                        </div>
-                        <span class="bg-gradient-to-r from-orange-600 to-red-600 text-transparent bg-clip-text">Flux RSS
-                            suivis</span>
-                    </h3>
-
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <!-- AWS -->
-                        <div class="group relative" data-aos="zoom-in" data-aos-delay="100">
-                            <div
-                                class="absolute -inset-1 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300">
-                            </div>
-                            <div
-                                class="relative bg-white rounded-2xl shadow-md hover:shadow-xl p-6 border border-gray-200 hover:border-orange-300 transition-all duration-300 hover:-translate-y-2">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div
-                                        class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <i class="fab fa-aws text-4xl text-orange-500"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-xl font-bold text-gray-800">AWS News Blog</h4>
-                                        <span class="text-xs px-2 py-1 bg-orange-100 text-orange-700 rounded-full">Mis à
-                                            jour quotidiennement</span>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600 mb-4 leading-relaxed">
-                                    J'y ai appris les nouveautés AWS et comment utiliser leurs services cloud pour
-                                    déployer
-                                    et gérer des applications efficacement.
-                                </p>
-                                <a href="https://aws.amazon.com/blogs/aws/feed/" target="_blank"
-                                    class="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold group/link">
-                                    <span>Voir le flux</span>
-                                    <i
-                                        class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Google Cloud -->
-                        <div class="group relative" data-aos="zoom-in" data-aos-delay="200">
-                            <div
-                                class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300">
-                            </div>
-                            <div
-                                class="relative bg-white rounded-2xl shadow-md hover:shadow-xl p-6 border border-gray-200 hover:border-blue-300 transition-all duration-300 hover:-translate-y-2">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div
-                                        class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <i class="fab fa-google text-4xl text-blue-500"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-xl font-bold text-gray-800">Google Cloud Blog</h4>
-                                        <span
-                                            class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Innovations
-                                            récentes</span>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600 mb-4 leading-relaxed">
-                                    Ce flux m'a permis de comprendre les meilleures pratiques Google Cloud et de suivre
-                                    les
-                                    innovations sur la plateforme.
-                                </p>
-                                <a href="https://console.cloud.google.com/welcome/new?project=exalted-density-478006-n5"
-                                    target="_blank"
-                                    class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold group/link">
-                                    <span>Voir le flux</span>
-                                    <i
-                                        class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Microsoft Azure -->
-                        <div class="group relative" data-aos="zoom-in" data-aos-delay="300">
-                            <div
-                                class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300">
-                            </div>
-                            <div
-                                class="relative bg-white rounded-2xl shadow-md hover:shadow-xl p-6 border border-gray-200 hover:border-blue-400 transition-all duration-300 hover:-translate-y-2">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div
-                                        class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <i class="fab fa-microsoft text-4xl text-blue-600"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-xl font-bold text-gray-800">Microsoft Azure Blog</h4>
-                                        <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Mises à
-                                            jour
-                                            régulières</span>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600 mb-4 leading-relaxed">
-                                    J'ai découvert les mises à jour et innovations Azure, et comment elles peuvent
-                                    améliorer
-                                    la gestion d'infrastructures cloud.
-                                </p>
-                                <a href="https://azure.microsoft.com/en-us/blog/feed/" target="_blank"
-                                    class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold group/link">
-                                    <span>Voir le flux</span>
-                                    <i
-                                        class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- DevOps.com -->
-                        <div class="group relative" data-aos="zoom-in" data-aos-delay="400">
-                            <div
-                                class="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300">
-                            </div>
-                            <div
-                                class="relative bg-white rounded-2xl shadow-md hover:shadow-xl p-6 border border-gray-200 hover:border-green-300 transition-all duration-300 hover:-translate-y-2">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div
-                                        class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <i class="fa-solid fa-code-branch text-4xl text-green-500"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-xl font-bold text-gray-800">DevOps.com</h4>
-                                        <span
-                                            class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Actualités
-                                            DevOps</span>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600 mb-4 leading-relaxed">
-                                    Ce site m'a appris les pratiques DevOps essentielles et comment automatiser les
-                                    processus pour gagner en efficacité.
-                                </p>
-                                <a href="https://devops.com/feed/" target="_blank"
-                                    class="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-semibold group/link">
-                                    <span>Voir le flux</span>
-                                    <i
-                                        class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Newsletters avec design amélioré -->
-                <div class="mb-20" data-aos="fade-left">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
-                        <div
-                            class="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg">
-                            <i class="fa-solid fa-newspaper text-white text-xl"></i>
-                        </div>
-                        <span
-                            class="bg-gradient-to-r from-red-600 to-pink-600 text-transparent bg-clip-text">Newsletters
-                            suivies</span>
-                    </h3>
-
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <!-- Cloud Weekly -->
-                        <div class="group relative" data-aos="flip-left" data-aos-delay="100">
-                            <div
-                                class="absolute -inset-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300">
-                            </div>
-                            <div
-                                class="relative bg-white rounded-2xl shadow-md hover:shadow-xl p-6 border border-gray-200 hover:border-blue-300 transition-all duration-300 hover:-translate-y-2 text-center">
-                                <div
-                                    class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-cloud text-white text-3xl"></i>
-                                </div>
-                                <h4 class="text-xl font-bold mb-2 text-gray-800">Cloud Weekly</h4>
-                                <span
-                                    class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full inline-block mb-3">Hebdomadaire</span>
-                                <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-                                    J'y reçois un résumé hebdomadaire des nouveautés cloud et des conseils pratiques
-                                    pour
-                                    déployer efficacement.
-                                </p>
-                                <a href="https://cloudweekly.co/" target="_blank"
-                                    class="inline-block px-6 py-2 bg-gradient-to-r from-blue-400 to-cyan-400 text-white font-semibold rounded-full shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                    Accéder au site
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- DevOps Digest -->
-                        <div class="group relative" data-aos="flip-left" data-aos-delay="200">
-                            <div
-                                class="absolute -inset-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300">
-                            </div>
-                            <div
-                                class="relative bg-white rounded-2xl shadow-md hover:shadow-xl p-6 border border-gray-200 hover:border-orange-300 transition-all duration-300 hover:-translate-y-2 text-center">
-                                <div
-                                    class="w-20 h-20 mx-auto bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-cogs text-white text-3xl"></i>
-                                </div>
-                                <h4 class="text-xl font-bold mb-2 text-gray-800">DevOps Digest</h4>
-                                <span
-                                    class="text-xs px-2 py-1 bg-orange-100 text-orange-700 rounded-full inline-block mb-3">Quotidien</span>
-                                <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-                                    Cette newsletter me permet de suivre quotidiennement les actualités et outils
-                                    DevOps.
-                                </p>
-                                <a href="https://devopsdigest.com/" target="_blank"
-                                    class="inline-block px-6 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-full shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                    Accéder au site
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- The New Stack -->
-                        <div class="group relative" data-aos="flip-left" data-aos-delay="300">
-                            <div
-                                class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300">
-                            </div>
-                            <div
-                                class="relative bg-white rounded-2xl shadow-md hover:shadow-xl p-6 border border-gray-200 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 text-center">
-                                <div
-                                    class="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-layer-group text-white text-3xl"></i>
-                                </div>
-                                <h4 class="text-xl font-bold mb-2 text-gray-800">The New Stack</h4>
-                                <span
-                                    class="text-xs px-2 py-1 bg-purple-100 text-purple-700 rounded-full inline-block mb-3">Hebdomadaire</span>
-                                <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-                                    J'y découvre les tendances technologiques émergentes et les bonnes pratiques pour
-                                    rester
-                                    à jour.
-                                </p>
-                                <a href="https://thenewstack.io/newsletter/" target="_blank"
-                                    class="inline-block px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                    Accéder au site
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Google Alerts avec design amélioré -->
-                <div data-aos="fade-up">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
-                        <div
-                            class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg">
-                            <i class="fab fa-google text-white text-xl"></i>
-                        </div>
-                        <span class="bg-gradient-to-r from-green-600 to-emerald-600 text-transparent bg-clip-text">Suivi
-                            via
-                            Google Alerts</span>
-                    </h3>
-
-                    <div class="relative group">
-                        <div
-                            class="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300">
-                        </div>
-                        <div
-                            class="relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-200">
-                            <p class="text-gray-700 text-center mb-8 text-lg leading-relaxed">
-                                J'utilise Google Alerts pour recevoir automatiquement les dernières informations sur le
-                                Cloud, DevOps et l’Infrastructure as Code.
-                                Cela me permet de rester à jour sur les nouvelles pratiques, outils et innovations sans
-                                avoir à chercher manuellement.
-                            </p>
-
-                            <div class="grid md:grid-cols-3 gap-6">
-                                <!-- Cloud Computing -->
-                                <div
-                                    class="group/alert text-center p-4 hover:bg-gradient-to-br hover:from-blue-50 hover:to-cyan-50 rounded-xl transition-all duration-300">
-                                    <div
-                                        class="w-16 h-16 mx-auto bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center mb-3 group-hover/alert:scale-110 transition-transform">
-                                        <i class="fa-solid fa-cloud text-white text-2xl"></i>
-                                    </div>
-                                    <h4 class="font-bold text-lg mb-2 text-gray-800">Cloud Computing</h4>
-                                    <p class="text-sm text-gray-600">Nouveaux services cloud, bonnes pratiques et guides
-                                        de
-                                        déploiement</p>
-                                    <span
-                                        class="inline-block mt-3 text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Alertes
-                                        quotidiennes</span>
-                                </div>
-
-                                <!-- DevOps -->
-                                <div
-                                    class="group/alert text-center p-4 hover:bg-gradient-to-br hover:from-orange-50 hover:to-red-50 rounded-xl transition-all duration-300">
-                                    <div
-                                        class="w-16 h-16 mx-auto bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-3 group-hover/alert:scale-110 transition-transform">
-                                        <i class="fa-solid fa-code-branch text-white text-2xl"></i>
-                                    </div>
-                                    <h4 class="font-bold text-lg mb-2 text-gray-800">DevOps</h4>
-                                    <p class="text-sm text-gray-600">Nouvelles méthodes CI/CD, automatisation et outils
-                                        DevOps</p>
-                                    <span
-                                        class="inline-block mt-3 text-xs px-2 py-1 bg-orange-100 text-orange-700 rounded-full">Alertes
-                                        quotidiennes</span>
-                                </div>
-
-                                <!-- Infrastructure as Code -->
-                                <div
-                                    class="group/alert text-center p-4 hover:bg-gradient-to-br hover:from-purple-50 hover:to-pink-50 rounded-xl transition-all duration-300">
-                                    <div
-                                        class="w-16 h-16 mx-auto bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-3 group-hover/alert:scale-110 transition-transform">
-                                        <i class="fa-solid fa-infinity text-white text-2xl"></i>
-                                    </div>
-                                    <h4 class="font-bold text-lg mb-2 text-gray-800">Infrastructure as Code</h4>
-                                    <p class="text-sm text-gray-600">Templates, scripts Terraform/CloudFormation et
-                                        bonnes
-                                        pratiques</p>
-                                    <span
-                                        class="inline-block mt-3 text-xs px-2 py-1 bg-purple-100 text-purple-700 rounded-full">Alertes
-                                        quotidiennes</span>
-                                </div>
-                            </div>
-
-                            <div
-                                class="mt-8 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200">
-                                <p class="text-center text-gray-700 flex items-center justify-center gap-2">
-                                    <i class="fa-solid fa-lightbulb text-yellow-500 text-xl"></i>
-                                    <span class="font-medium">Fréquence paramétrée sur <span
-                                            class="text-green-600 font-bold">"Une fois par jour"</span> pour un suivi
-                                        optimal et régulier</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Style additionnel pour les animations -->
-    <style>
-        @keyframes blob {
-
-            0%,
-            100% {
-                transform: translate(0px, 0px) scale(1);
-            }
-
-            33% {
-                transform: translate(30px, -50px) scale(1.1);
-            }
-
-            66% {
-                transform: translate(-20px, 20px) scale(0.9);
-            }
-        }
-
-        .animate-blob {
-            animation: blob 10s infinite;
-        }
-
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
-
-        .animation-delay-3000 {
-            animation-delay: 3s;
-        }
-
-        .animation-delay-4000 {
-            animation-delay: 4s;
-        }
-    </style>
-
-
-<!--==================== PROJETS & STAGES ====================-->
-<section class="portfolio-section py-20 md:py-28 bg-gradient-to-b from-white to-gray-50">
-    <div class="container mx-auto px-4">
-        
-        <!-- Header général -->
-        <div class="text-center mb-16" data-aos="fade-up">
-            <span class="text-red-500 font-semibold text-sm uppercase tracking-wider">Mon portfolio</span>
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">Projets & Expériences</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-blue-500 mx-auto rounded-full"></div>
-            <p class="text-gray-500 max-w-2xl mx-auto mt-4">Découvrez l'ensemble de mes réalisations en formation et en entreprise</p>
-        </div>
-
-        <!-- ========== ROW 1 : PROJETS EN FORMATION ========== -->
-        <div class="mb-24" id="projets-formation" data-aos="fade-up">
-            <div class="flex items-center gap-3 mb-8">
-                <div class="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center">
-                    <i class="fa-solid fa-laptop-code text-white text-sm"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 text-center">Projets en formation</h3>
-                <div class="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <!-- Carte SUPERCAR -->
-                <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
-                    <div class="h-2 bg-gradient-to-r from-red-500 to-orange-500"></div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-2 border border-gray-100">
-                                <img src="assets/img/logo-supercar.png" alt="Supercar" class="w-full h-full object-contain">
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-gray-800">Supercar</h4>
-                                <p class="text-gray-500 text-sm">Gestion automobile</p>
-                            </div>
-                        </div>
+            <!-- Flux RSS — AWS -->
+            <div class="group relative flex flex-col" data-aos="fade-up" data-aos-delay="0">
+                <div class="absolute -inset-1 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl blur opacity-20 group-hover:opacity-35 transition duration-300"></div>
+                <div class="relative flex flex-col flex-1 bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100 hover:border-orange-200 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                    <!-- badge type -->
+                    <div class="flex items-center gap-2 px-5 pt-5 pb-3 border-b border-gray-100">
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 bg-orange-100 text-orange-700 rounded-full">
+                            <i class="fa-solid fa-rss text-[10px]"></i> Flux RSS
+                        </span>
                         
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Application complète avec interfaces client et administrateur pour la gestion des véhicules, rendez-vous et clients.
+                    </div>
+                    <!-- contenu -->
+                    <div class="flex flex-col flex-1 p-5">
+                        <div class="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                            <i class="fab fa-aws text-3xl text-orange-500"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">AWS News Blog</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed flex-1">
+                            J'exploite des flux RSS pour centraliser automatiquement les nouveaux articles publiés par les experts et sites spécialisés en Cloud Computing et déploiement d'applications.
                         </p>
-
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-red-50 text-red-600 rounded-lg text-xs font-medium">PHP</span>
-                            <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-lg text-xs font-medium">MySQL</span>
-                            <span class="px-2 py-1 bg-yellow-50 text-yellow-600 rounded-lg text-xs font-medium">JavaScript</span>
-                            <span class="px-2 py-1 bg-orange-50 text-orange-600 rounded-lg text-xs font-medium">HTML/CSS</span>
-                        </div>
-
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <a href="assets/pdf/supercar.pdf" target="_blank" class="text-red-600 text-xs hover:underline">📄 Présentation</a>
-                            <a href="assets/pdf/Rapport de projet Supercar.pdf" target="_blank" class="text-gray-500 text-xs hover:underline">📑 Rapport</a>
-                            <a href="assets/pdf/Contexte Supercar 2024-26.pdf" target="_blank" class="text-gray-500 text-xs hover:underline">🎯 Contexte</a>
-                        </div>
-
-                        <div class="flex gap-3">
-                            <a href="https://karensupercar.alwaysdata.net/Supercar/Supercar-client" target="_blank" 
-                                class="flex-1 text-center px-3 py-2 bg-red-50 text-red-600 rounded-xl text-sm font-medium hover:bg-red-100 transition-colors">
-                                Client →
-                            </a>
-                            <a href="https://karensupercar.alwaysdata.net/Supercar/Supercar-admin" target="_blank"
-                                class="flex-1 text-center px-3 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-medium hover:bg-blue-100 transition-colors">
-                                Admin →
-                            </a>
-                        </div>
+                        <ul class="mt-3 space-y-1">
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <i class="fa-solid fa-circle text-[6px] text-orange-400"></i> AWS News Blog
+                            </li>
+                        </ul>
+                        
                     </div>
                 </div>
+            </div>
 
-                <!-- Carte VMS -->
-                <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
-                    <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-2 border border-gray-100">
-                                <img src="assets/img/logo-vms.png" alt="VMS" class="w-full h-full object-contain">
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-gray-800">VMS</h4>
-                                <p class="text-gray-500 text-sm">Bons cadeaux multi-enseignes</p>
-                            </div>
+            <!-- Newsletter — The New Stack -->
+            <div class="group relative flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute -inset-1 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl blur opacity-20 group-hover:opacity-35 transition duration-300"></div>
+                <div class="relative flex flex-col flex-1 bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100 hover:border-purple-200 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                    <!-- badge type -->
+                    <div class="flex items-center gap-2 px-5 pt-5 pb-3 border-b border-gray-100">
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 bg-purple-100 text-purple-700 rounded-full">
+                            <i class="fa-solid fa-newspaper text-[10px]"></i> Newsletter
+                        </span>
+                        <span class="text-xs text-gray-400">Hebdomadaire</span>
+                    </div>
+                    <!-- contenu -->
+                    <div class="flex flex-col flex-1 p-5">
+                        <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-layer-group text-3xl text-purple-500"></i>
                         </div>
-                        
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Centralisation de l'émission, suivi et échange de bons cadeaux avec QR code anti-fraude et envoi automatique par email.
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">The New Stack</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed flex-1">
+                            Tendances cloud natif, DevOps et déploiement d'applications — référence mondiale sur ces sujets.
                         </p>
-
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-orange-50 text-orange-600 rounded-lg text-xs font-medium">JavaFX</span>
-                            <span class="px-2 py-1 bg-green-50 text-green-600 rounded-lg text-xs font-medium">PostgreSQL</span>
-                            <span class="px-2 py-1 bg-purple-50 text-purple-600 rounded-lg text-xs font-medium">Back-office</span>
-                        </div>
-
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <a href="assets/pdf/VMS.pdf" target="_blank" class="text-purple-600 text-xs hover:underline">📄 Présentation</a>
-                            <a href="assets/pdf/vms-rapport.pdf" target="_blank" class="text-gray-500 text-xs hover:underline">📑 Rapport</a>
-                            <a href="assets/pdf/vms-contexte.pdf" target="_blank" class="text-gray-500 text-xs hover:underline">🎯 Contexte</a>
-                        </div>
-
-                        <a href="" target="_blank"
-                            class="block text-center px-3 py-2 bg-purple-50 text-purple-600 rounded-xl text-sm font-medium hover:bg-purple-100 transition-colors">
-                            Voir le Back Office →
+                        <a href="https://thenewstack.io/newsletter/" target="_blank"
+                            class="inline-flex items-center gap-1.5 text-purple-600 hover:text-purple-700 text-sm font-semibold mt-4 group/link">
+                            Accéder au site <i class="fa-solid fa-arrow-right text-xs group-hover/link:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- ========== ROW 2 : STAGES EN ENTREPRISE ========== -->
-        <div data-aos="fade-up" data-aos-delay="100" id="stage">
-            <div class="flex items-center gap-3 mb-8">
-                <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center">
-                    <i class="fa-solid fa-building text-white text-sm"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 text-center">Stages en entreprise</h3>
-                <div class="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <!-- Carte ACENSI - Stage 1ère année -->
-                <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
-                    <div class="h-2 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-2 border border-gray-100">
-                                <img src="assets/img/logo-acensi.png" alt="Acensi" class="w-full h-full object-contain">
-                            </div>
-                            <div>
-                                <div class="flex items-center gap-2">
-                                    <h4 class="text-xl font-bold text-gray-800">Acensi</h4>
-                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">1ère année</span>
-                                </div>
-                                <p class="text-gray-500 text-sm">Application CRM</p>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Développement d'une application CRM complète pour la gestion des relations clients, suivi des prospects, opportunités et contrats.
-                        </p>
-
-                        <div class="flex flex-wrap gap-3 mb-4">
-                            <a href="assets/pdf/stage.pdf" target="_blank" class="text-blue-600 text-sm hover:underline flex items-center gap-1">
-                                <i class="fa-solid fa-file-powerpoint text-xs"></i> Présentation
-                            </a>
-                            <a href="assets/pdf/Rapport de stage .pdf" target="_blank" class="text-gray-500 text-sm hover:underline flex items-center gap-1">
-                                <i class="fa-solid fa-file-lines text-xs"></i> Rapport
-                            </a>
-                            <a href="assets/pdf/acensi-bilan.pdf" target="_blank" class="text-gray-500 text-sm hover:underline flex items-center gap-1">
-                                <i class="fa-solid fa-chart-line text-xs"></i> Bilan
-                            </a>
-                        </div>
-
-                        <div class="bg-gray-50 rounded-xl p-3 flex items-center gap-3">
-                            <div class="w-12 h-10 bg-gray-200 rounded-lg overflow-hidden">
-                                <img src="assets/img/stage-crm.png" alt="CRM" class="w-full h-full object-cover">
-                            </div>
-                            <span class="text-gray-500 text-xs">Application CRM Full Stack</span>
-                        </div>
+            <!-- Google Alerts -->
+            <div class="group relative flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                <div class="absolute -inset-1 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl blur opacity-20 group-hover:opacity-35 transition duration-300"></div>
+                <div class="relative flex flex-col flex-1 bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100 hover:border-green-200 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                    <!-- badge type -->
+                    <div class="flex items-center gap-2 px-5 pt-5 pb-3 border-b border-gray-100">
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 bg-green-100 text-green-700 rounded-full">
+                            <i class="fab fa-google text-[10px]"></i> Google Alerts
+                        </span>
+                        <span class="text-xs text-gray-400">Quand le cas se présente</span>
                     </div>
-                </div>
-
-                <!-- Carte PRECISION LAW FIRM - Stage 2ème année -->
-                <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
-                    <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-2 border border-gray-100">
-                                <img src="assets/img/horse.PNG" alt="Precision Law Firm" class="w-full h-full object-contain">
-                            </div>
-                            <div>
-                                <div class="flex items-center gap-2">
-                                    <h4 class="text-xl font-bold text-gray-800">Precision Law Firm</h4>
-                                    <span class="px-2 py-0.5 bg-purple-100 text-purple-600 rounded-full text-xs font-medium">2ème année</span>
-                                </div>
-                                <p class="text-gray-500 text-sm">Plateforme cabinet d'avocats</p>
-                            </div>
+                    <!-- contenu -->
+                    <div class="flex flex-col flex-1 p-5">
+                        <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-cloud text-3xl text-green-500"></i>
                         </div>
-                        
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Plateforme complète avec gestion des dossiers clients, suivi des affaires juridiques, calendrier des audiences, espace client sécurisé et génération automatique de documents légaux.
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Cloud Computing</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed flex-1">
+                            J'utilise Google Alerts pour recevoir automatiquement les dernières actualités sur le Cloud Computing et le déploiement d'applications. Cela me permet de rester à jour sur les nouvelles pratiques et outils sans chercher manuellement.
                         </p>
-
-                        <div class="flex flex-wrap gap-3 mb-4">
-                            <a href="assets/pdf/plf.pdf" target="_blank" class="text-purple-600 text-sm hover:underline flex items-center gap-1">
-                                <i class="fa-solid fa-file-powerpoint text-xs"></i> Présentation
-                            </a>
-                            <a href="assets/pdf/precision-rapport.pdf" target="_blank" class="text-gray-500 text-sm hover:underline flex items-center gap-1">
-                                <i class="fa-solid fa-file-lines text-xs"></i> Rapport
-                            </a>
-                            <a href="assets/pdf/precision-bilan.pdf" target="_blank" class="text-gray-500 text-sm hover:underline flex items-center gap-1">
-                                <i class="fa-solid fa-chart-line text-xs"></i> Bilan
-                            </a>
-                        </div>
-
-                        <div class="flex gap-3">
-                            <a href="https://precisionlawfirm.net/" target="_blank" 
-                                class="flex-1 text-center px-3 py-2 bg-gray-800 text-white rounded-xl text-sm font-medium hover:bg-gray-900 transition-colors">
-                                Site public →
-                            </a>
-                            <a href="https://precisionlawfirm.net/admin" target="_blank"
-                                class="flex-1 text-center px-3 py-2 bg-purple-50 text-purple-600 rounded-xl text-sm font-medium hover:bg-purple-100 transition-colors">
-                                Back Office →
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
 </section>
+
+    <!--==================== PROJETS & STAGES ====================-->
+    <section class="portfolio-section py-20 md:py-28 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4">
+
+            <!-- Header général -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-red-500 font-semibold text-sm uppercase tracking-wider">Mon portfolio</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">Projets & Expériences</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-blue-500 mx-auto rounded-full"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-4">Découvrez l'ensemble de mes réalisations en formation et
+                    en entreprise</p>
+            </div>
+
+            <!-- ========== ROW 1 : PROJETS EN FORMATION ========== -->
+            <div class="mb-24" id="projets-formation" data-aos="fade-up">
+                <div class="flex items-center gap-3 mb-8">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-laptop-code text-white text-sm"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 text-center">Projets en formation</h3>
+                    <div class="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <!-- Carte SUPERCAR -->
+                    <div
+                        class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+                        <div class="h-2 bg-gradient-to-r from-red-500 to-orange-500"></div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div
+                                    class="w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-2 border border-gray-100">
+                                    <img src="assets/img/logo-supercar.png" alt="Supercar"
+                                        class="w-full h-full object-contain">
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800">Supercar</h4>
+                                    <p class="text-gray-500 text-sm">Gestion automobile</p>
+                                </div>
+                            </div>
+
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Application complète avec interfaces client et administrateur pour la gestion des
+                                véhicules, rendez-vous et clients.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-red-50 text-red-600 rounded-lg text-xs font-medium">PHP</span>
+                                <span
+                                    class="px-2 py-1 bg-blue-50 text-blue-600 rounded-lg text-xs font-medium">MySQL</span>
+                                <span
+                                    class="px-2 py-1 bg-yellow-50 text-yellow-600 rounded-lg text-xs font-medium">JavaScript</span>
+                                <span
+                                    class="px-2 py-1 bg-orange-50 text-orange-600 rounded-lg text-xs font-medium">HTML/CSS</span>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <a href="assets/pdf/supercar.pdf" target="_blank"
+                                    class="text-red-600 text-xs hover:underline">📄 Présentation</a>
+                                <a href="assets/pdf/Rapport de projet Supercar.pdf" target="_blank"
+                                    class="text-gray-500 text-xs hover:underline">📑 Rapport</a>
+                                <a href="assets/pdf/Contexte Supercar 2024-26.pdf" target="_blank"
+                                    class="text-gray-500 text-xs hover:underline">🎯 Contexte</a>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <a href="https://karensupercar.alwaysdata.net/Supercar/Supercar-client" target="_blank"
+                                    class="flex-1 text-center px-3 py-2 bg-red-50 text-red-600 rounded-xl text-sm font-medium hover:bg-red-100 transition-colors">
+                                    Client →
+                                </a>
+                                <a href="https://karensupercar.alwaysdata.net/Supercar/Supercar-admin" target="_blank"
+                                    class="flex-1 text-center px-3 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-medium hover:bg-blue-100 transition-colors">
+                                    Admin →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte VMS -->
+                    <div
+                        class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+                        <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div
+                                    class="w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-2 border border-gray-100">
+                                    <img src="assets/img/logo-vms.png" alt="VMS" class="w-full h-full object-contain">
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800">VMS</h4>
+                                    <p class="text-gray-500 text-sm">Bons cadeaux multi-enseignes</p>
+                                </div>
+                            </div>
+
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Centralisation de l'émission, suivi et échange de bons cadeaux avec QR code anti-fraude
+                                et envoi automatique par email.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-2 py-1 bg-orange-50 text-orange-600 rounded-lg text-xs font-medium">JavaFX</span>
+                                <span
+                                    class="px-2 py-1 bg-green-50 text-green-600 rounded-lg text-xs font-medium">PostgreSQL</span>
+                                <span
+                                    class="px-2 py-1 bg-purple-50 text-purple-600 rounded-lg text-xs font-medium">Back-office</span>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <a href="assets/pdf/VMS.pdf" target="_blank"
+                                    class="text-purple-600 text-xs hover:underline">📄 Présentation</a>
+                                <a href="assets/pdf/vms-rapport.pdf" target="_blank"
+                                    class="text-gray-500 text-xs hover:underline">📑 Rapport</a>
+                                <a href="assets/pdf/vms-contexte.pdf" target="_blank"
+                                    class="text-gray-500 text-xs hover:underline">🎯 Contexte</a>
+                            </div>
+
+                            <a href="" target="_blank"
+                                class="block text-center px-3 py-2 bg-purple-50 text-purple-600 rounded-xl text-sm font-medium hover:bg-purple-100 transition-colors">
+                                Voir le Back Office →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== ROW 2 : STAGES EN ENTREPRISE ========== -->
+            <div data-aos="fade-up" data-aos-delay="100" id="stage">
+                <div class="flex items-center gap-3 mb-8">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-building text-white text-sm"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 text-center">Stages en entreprise</h3>
+                    <div class="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <!-- Carte ACENSI - Stage 1ère année -->
+                    <div
+                        class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+                        <div class="h-2 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div
+                                    class="w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-2 border border-gray-100">
+                                    <img src="assets/img/logo-acensi.png" alt="Acensi"
+                                        class="w-full h-full object-contain">
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="text-xl font-bold text-gray-800">Acensi</h4>
+                                        <span
+                                            class="px-2 py-0.5 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">1ère
+                                            année</span>
+                                    </div>
+                                    <p class="text-gray-500 text-sm">Application CRM</p>
+                                </div>
+                            </div>
+
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Développement d'une application CRM complète pour la gestion des relations clients,
+                                suivi des prospects, opportunités et contrats.
+                            </p>
+
+                            <div class="flex flex-wrap gap-3 mb-4">
+                                <a href="assets/pdf/stage.pdf" target="_blank"
+                                    class="text-blue-600 text-sm hover:underline flex items-center gap-1">
+                                    <i class="fa-solid fa-file-powerpoint text-xs"></i> Présentation
+                                </a>
+                                <a href="assets/pdf/Rapport de stage .pdf" target="_blank"
+                                    class="text-gray-500 text-sm hover:underline flex items-center gap-1">
+                                    <i class="fa-solid fa-file-lines text-xs"></i> Rapport
+                                </a>
+                                <a href="assets/pdf/acensi-bilan.pdf" target="_blank"
+                                    class="text-gray-500 text-sm hover:underline flex items-center gap-1">
+                                    <i class="fa-solid fa-chart-line text-xs"></i> Bilan
+                                </a>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-xl p-3 flex items-center gap-3">
+                                <div class="w-12 h-10 bg-gray-200 rounded-lg overflow-hidden">
+                                    <img src="assets/img/stage-crm.png" alt="CRM" class="w-full h-full object-cover">
+                                </div>
+                                <span class="text-gray-500 text-xs">Application CRM Full Stack</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte PRECISION LAW FIRM - Stage 2ème année -->
+                    <div
+                        class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+                        <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div
+                                    class="w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-2 border border-gray-100">
+                                    <img src="assets/img/horse.PNG" alt="Precision Law Firm"
+                                        class="w-full h-full object-contain">
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="text-xl font-bold text-gray-800">Precision Law Firm</h4>
+                                        <span
+                                            class="px-2 py-0.5 bg-purple-100 text-purple-600 rounded-full text-xs font-medium">2ème
+                                            année</span>
+                                    </div>
+                                    <p class="text-gray-500 text-sm">Plateforme cabinet d'avocats</p>
+                                </div>
+                            </div>
+
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Plateforme complète avec gestion des dossiers clients, suivi des affaires juridiques,
+                                calendrier des audiences, espace client sécurisé et génération automatique de documents
+                                légaux.
+                            </p>
+
+                            <div class="flex flex-wrap gap-3 mb-4">
+                                <a href="assets/pdf/plf.pdf" target="_blank"
+                                    class="text-purple-600 text-sm hover:underline flex items-center gap-1">
+                                    <i class="fa-solid fa-file-powerpoint text-xs"></i> Présentation
+                                </a>
+                                <a href="assets/pdf/precision-rapport.pdf" target="_blank"
+                                    class="text-gray-500 text-sm hover:underline flex items-center gap-1">
+                                    <i class="fa-solid fa-file-lines text-xs"></i> Rapport
+                                </a>
+                                <a href="assets/pdf/precision-bilan.pdf" target="_blank"
+                                    class="text-gray-500 text-sm hover:underline flex items-center gap-1">
+                                    <i class="fa-solid fa-chart-line text-xs"></i> Bilan
+                                </a>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <a href="https://precisionlawfirm.net/" target="_blank"
+                                    class="flex-1 text-center px-3 py-2 bg-gray-800 text-white rounded-xl text-sm font-medium hover:bg-gray-900 transition-colors">
+                                    Site public →
+                                </a>
+                                <a href="https://precisionlawfirm.net/admin" target="_blank"
+                                    class="flex-1 text-center px-3 py-2 bg-purple-50 text-purple-600 rounded-xl text-sm font-medium hover:bg-purple-100 transition-colors">
+                                    Back Office →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- Lien vers le JS externe -->
     <script src=" js/projets-tabs.js"></script>
